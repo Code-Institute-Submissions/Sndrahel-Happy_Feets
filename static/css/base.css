@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/feet-bath.jpg') no-repeat center center fixed;
+    background: url('/media/feet-treatment.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -25,6 +25,10 @@ body {
 
 .main-logo-link {
     width: fit-content;
+}
+
+.top-banner {
+    background-color: #32c215c2;
 }
 
 .shop-now-button {
@@ -109,17 +113,17 @@ input[name='q']::placeholder {
 /* Footer */
 
 .footer-wrapper{
-    background-color: #32c21583;
+    background-color: #32c215c2;
     padding-top: 20px;
-    color: #fff;
+    color: black;
 }
 
 .footer-links {
-    color: white;
+    color: black;
 }
 
 .footer-icons {
-    color: white;
+    color: black;
 }
 
 /* ------------------------------- bootstrap toasts */
