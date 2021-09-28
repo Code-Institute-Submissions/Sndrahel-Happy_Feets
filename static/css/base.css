@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/feet-treatment.jpg') no-repeat center center fixed;
+    background: url('/media/feet-pedicure.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -28,7 +28,7 @@ body {
 }
 
 .top-banner {
-    background-color: #32c215c2;
+    background-color: #165e08c2;
 }
 
 .shop-now-button {
@@ -113,17 +113,17 @@ input[name='q']::placeholder {
 /* Footer */
 
 .footer-wrapper{
-    background-color: #32c215c2;
+    background-color: #165e08c2;
     padding-top: 20px;
-    color: black;
+    color: white;
 }
 
 .footer-links {
-    color: black;
+    color: white;
 }
 
 .footer-icons {
-    color: black;
+    color: white;
 }
 
 /* ------------------------------- bootstrap toasts */
