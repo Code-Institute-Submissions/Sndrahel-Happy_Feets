@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container h-100">
+    <div class="row h-100">
+        <figure class="col-md-6 my-auto">
+            <img class="d-block w-100 feature-img-round mx-auto" src="{{ MEDIA_URL }}happywoman.jpg" alt="Woman with happy face">
+            <figcaption>Happy Feets</figcaption>
+        </figure>
+        <div class="col-md-6 my-auto">
+            <div class="jumbotron bg-white">
+                <h1>Hi, I'm Monica.</h1>
+                <hr>
+                <p>I am a certified medical podiatrist and trained at Axelsons Institut in Stockholm.</p>
+                <p>I am a member of the Swedish Podiatrists' National Organization and hold treatment injury insurance.
+                </p>
+                <p>I am a trained assistant nurse and have worked at the Orthopedic Clinic Gävle Hospital.
+                </p>
+                <div class="text-center">
+                    <a class="btn btn-lg btn-home" href="#services">Learn More</a>
+                    <a class="btn btn-contact btn-lg" href="#contact">Contact Me</a>
+                </div>
+            </div> 
+        </div>
+        <div class="my-5">
+            <h4>
+                <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Book Now</a>
+            </h4>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
