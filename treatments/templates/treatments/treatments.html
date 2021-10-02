@@ -26,11 +26,11 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 mx-1">
                             {% if package.image %}
-                            <a href="">
+                            <a href="{% url 'package_detail' package.id %}">
                                 <img class="card-img-top img-fluid" src="{{ package.image.url }}" alt="{{ package.name }}">
                             </a>
                             {% else %}
-                            <a href="">
+                            <a href="{% url 'package_detail' package.id %}">
                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ package.name }}">
                             </a>
                             {% endif %}
