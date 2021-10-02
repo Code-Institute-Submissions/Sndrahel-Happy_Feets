@@ -1,13 +1,13 @@
 from django.db import models
 
 
-class Categories(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(
         max_length=254, blank=True)
 
     class Meta:
-        verbose_name_plural = 'Category'
+        verbose_name_plural = 'Categories'
 
     def __str__(self):
         return self.name
@@ -17,8 +17,8 @@ class Categories(models.Model):
 
 
 class Package(models.Model):
-    categories = models.ForeignKey(
-        "Categories", null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        "Category", null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(
         max_length=250, blank=True)
     name = models.CharField(max_length=300)

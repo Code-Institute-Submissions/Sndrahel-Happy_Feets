@@ -7,7 +7,7 @@
             "name": "Medically Foot Care Basic",
             "description": "30 min Medically Foot Care .... bla bla",
             "price": 65.00,
-            "categories": 1,
+            "category": 1,
             "image_url": "",
             "image": ""
         }
@@ -20,7 +20,7 @@
             "name": "Medically Foot Care Regular",
             "description": "60 min Medically Foot Care .... bla bla",
             "price": 105.00,
-            "categories": 1,
+            "category": 1,
             "image_url": "",
             "image": ""
         }
@@ -33,7 +33,7 @@
             "name": "Medically Foot Care Luxury",
             "description": "90 min Medically Foot Care .... bla bla",
             "price": 145.00,
-            "categories": 1,
+            "category": 1,
             "image_url": "",
             "image": ""
         }
@@ -46,7 +46,7 @@
             "name": "Medical Consultation",
             "description": "15 min Medically Foot Care .... bla bla",
             "price": 25.00,
-            "categories": 1,
+            "category": 1,
             "image_url": "",
             "image": ""
         }
@@ -59,7 +59,7 @@
             "name": "Wellness Foot Care Basic",
             "description": "30 min Wellnes Foot Care .... bla bla",
             "price": 65.00,
-            "categories": 2,
+            "category": 2,
             "image_url": "",
             "image": ""
         }
@@ -72,7 +72,7 @@
             "name": "Wellness Foot Care Regular",
             "description": "60 min Wellnes Foot Care .... bla bla",
             "price": 95.00,
-            "categories": 2,
+            "category": 2,
             "image_url": "",
             "image": ""
         }
@@ -85,7 +85,7 @@
             "name": "Wellness Foot Care Luxury",
             "description": "90 min Wellnes Foot Care .... bla bla",
             "price": 155.00,
-            "categories": 2,
+            "category": 2,
             "image_url": "",
             "image": ""
         }
@@ -98,7 +98,7 @@
             "name": "Nail Care",
             "description": "90 min Nail Care .... bla bla",
             "price": 100.00,
-            "categories": 2,
+            "category": 2,
             "image_url": "",
             "image": ""
         }
@@ -111,7 +111,7 @@
             "name": "Seasonal Treatments",
             "description": "120 min Foot Care  .... bla bla season",
             "price": 170.00,
-            "categories": 3,
+            "category": 3,
             "image_url": "",
             "image": ""
         }

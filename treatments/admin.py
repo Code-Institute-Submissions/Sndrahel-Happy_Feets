@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Package, Categories
+from .models import Package, Category
 
 
 class PackageAdmin(admin.ModelAdmin):
@@ -14,7 +14,7 @@ class PackageAdmin(admin.ModelAdmin):
     ordering = ('sku',)
 
 
-class CategoriesAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name'
@@ -22,4 +22,4 @@ class CategoriesAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Package, PackageAdmin)
-admin.site.register(Categories, CategoriesAdmin)
+admin.site.register(Category, CategoryAdmin)
