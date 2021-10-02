@@ -1,108 +1,307 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# HAPPY FEETS
 
-Welcome Sndrahel,
+## Full Stack Frameworks with Django
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+![Responsive Mockup](media/mockup.png)  
 
 ---
 
-Happy coding!
+## Project Summary
+
+Happy Feets is....
+
+This project is my final milstone project for Code Institute and is for educational purposes only.
+
+Feel Free to visit the live website: [Happy Feets]() 
+
+---
+# Table of contents
+
+- [UX](#ux)
+    - [Strategy](#strategy)
+    - [Scope](#scope)
+        - [User stories](#user-stories)
+    - [Structure of the website](#structure-of-the-website)
+    - [Skeleton](#skeleton)
+    - [Surface](#surface)
+- [Features](#features)
+- [Technologies used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+
+---
+# UX
+
+## Strategy
+
+The purpose of this project is to build a site where women connect and exchange knowledge and services
+
+## Scope
+
+Based on the requirements of achieving user's and owner's goals and stories, below is the list of required pages with the features and functions:
+
+- Simple design landing page that the purpose of the website is obvious to anybody and even first-time users know how to navigate the website. 
+- Services page where users can view all the services the site provides.
+- Blog page where user can read and comment on the latest post / news.
+- About page where users can get information about the site and what it provides.
+- Contact page where users can contact the admin of the site or to send a quotation,
+- Checkout success page where users get confirmation of purchase
+- Login / register page where users can log in or register.
+- Logout function that users can safely log out the website and takes users back to the home page.
+- Blog page management (admin only) where admin can add, edit, approve and delete content.
+
+
+### User Stories
+
+**ID** | **As a/an** | **I want to be able to...** | **So that I can**
+--- | --- | --- | ---
+1 | Site User | find responsive ,rich media , with a simple navbar | have a nice user experience
+2 | Site User | easily navigate through the website | understand what this website provide
+3 | Site User | view a list of services | select one to that suits
+4 | Site User | view services details | see description and ask for a qoute
+5 | Site User | read blog post about news and tips 
+6 | Site User | register an account | comment and share experience
+7 | Site User | contact the aministrator of the site | get more information
+8 | Site User | get a quotation for service
+9 | Administrator | have access to all the functionalities available as a simple user | controll the site and its content
+10 | Administrator | add new content | keep the site up to date
+11 | Administrator | create, read, update and delete content | manage my site content
+12 | Administrator | approve or disapprove comments| filter out objectionable comments
+
+
+## Structures of the website
+
+Website contains:
+- Navigation bar is fixed and collapse to burger icon on mobile devices with essential links to navigate on the website.
+- The home page first view will be simple in structure with a short text intro. 
+- Below it will contain some information about services and a about snippet with a testimonial carousel. 
+- The services page will contain information of what the services can be requested.
+- The about page will contain information of what the site provides and some information about the site ethos.
+- The contact page / request is a clean and simple contact.
+- The footer will contains social media links.
+
+
+## Skeleton
+
+### Wireframes
+
+The website is created as a desktop-first because it is easy to picture the whole image of the website, however, it is a fully mobile responsive website as well so users using a mobile phone have no difficulties toggeling the site. Below are the wireframes of the core pages of the website.
+
+- [Desktop]()
+- [Tablet]()
+- [Mobile]()
+
+
+## Surface
+
+
+### Design
+
+
+### Media 
+Pictures used in this site are taken from:
+- [Freepik](https://freepik.com/)
+- [Pexels](https://www.pexels.com/)
+- [Unsplash](https://unsplash.com/)
+
+
+---
+# Features:
+
+## Existing Features:
+
+### Base
+
+![Landing Page](media/landing_page.png)
+
+The landing page contains two background image with diffrent styles and some text and call to action buttons. 
+
+### Navbar
+
+![Navbar]()
+
+The navigation bar at the top of each page of the website enables the user to easily access all pages of the website. On smaller devices, the navbar transforms into a burger menu, where links are only visible in a dropdown menu.
+
+
+### Services Selection
+
+![Services]()
+
+This is where the users can read more detailed information about services that offers. The services card displays a button from where the users will have a direct access to the contact/request page.
+
+
+### About Us
+
+![About Us]()
+
+This is where the users can read more detailed information about what the site is about and who the persons behind it are. 
+
+
+### Blog Page
+
+![Blog]()
+
+The blog page displays an overview of all published blog posts for readers to scroll through. It also has a sidebar panel with a welcome message to users to tell them more about the blog and how often to come back for new blog posts. Logged in users can also comment on posted articles. Before comments are posted on the site they have to be approved by the admin. 
+
+
+### Contact Page
+
+![Contact]()
+
+On the contact page, a form is available for the user to send messages to the admin of the site or to send a request for service. The form contain the fields Name, email, subject, service sellection and message. 
+
+
+### Sign up a new user
+
+![Sign up]()
+
+When accessing the sign up screen, the user must choose a username, password and fill in a email for access to the commenting on the blog-platform.
+
+
+### User Login
+
+![Login]()
+
+On the login screen, the user is asked to fill in his/her login and password for access. 
+
+### Blog Management
+
+The blog management are only accessible to the admin of the website. The admin must approve comments before they are posted. The admin can edit, delete, and add blog posts. 
+
+
+## Features Left to Implement:
+
+- 
+- 
+- 
+- 
+
+----
+# Technologies Used:
+
+## Languages, framework libraries and programs:
+- [HTML5](https://en.wikipedia.org/wiki/HTML) - For markup
+- [CSS3](https://en.wikipedia.org/wiki/CSS) - For style
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - For interaction
+- [Python3](https://www.python.org/) - As a backend programming language
+- [Django](https://www.djangoproject.com/) - As the main framework of Python
+- [SQLite](https://www.sqlite.org/index.html) - As a database in development mode
+- [PostgreSQL](https://landing.aiven.io/en/aiven-for-postgresql/) - As a database in production mode
+- [Getbootstrap](https://getbootstrap.com/) - For containers and layout
+- [MDBootstrap](https://mdbootstrap.com/) - For card snippets
+- [Google Fonts](https://fonts.google.com/) - For fonts
+- [Font Awesome](https://fontawesome.com/) - For icons
+- [Gitpod](https://www.gitpod.io/) - As Integrated Development Environment (IDE)
+- [Git](https://git-scm.com/) - For local version control, keeping the files & documents
+- [GitHub](https://github.com/) - For online version control and keeping the files & documents
+- [Heroku](https://www.heroku.com/) - For deploying the website
+- [Balsamiq](https://balsamiq.com/) - For wireframes
+- [Am I responsive](http://ami.responsivedesign.is/) - For mockup
+
+---  
+# Testing:
+
+## Validator Testing:
+- [W3C Markup Validation Service](https://validator.w3.org/) - For testing HTML code
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - For testing CSS code
+- [PEP8 Online](http://pep8online.com/) - For checking Python PEP8 requirements. 
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - For testing, style checking and debugging
+
+
+### This project was tested with the following browsers: 
+- Laptop MacOS Big Sur (ver 11.4): Google Chrome
+
+
+### The following steps were taken:
+
+- Manually testing via Devtools 
+- Non-logged in user attempting to access content (refused)
+- All buttons and links tested
+- Users availing of the like button
+- Image uploads tested - large, incorrect format etc. 
+- Form tested with correct and incorrect detail 
+- Clear user experience & navigation
+- Picture loading speed
+- Login/register/logout functionalities
+- Edit, add, delete items & posts functionalities
+- bugs or disabled links
+
+### Issues / Unfixed Bugs:
+
+- Like button not working properly with hovering as well as counting likes - not fixed 
+- Testimonial carousell indicators doesnt float within the testimonial card on smaller devices - not fixed
+- When running CSS validator there is alot of warnings depending on the full bootstrap theme choosen.
+- I had issues with making the contact post - fixed.
+- All through I had many issues to make it work as I planned for in the beginning. The main reason for that depends on that I choosed to go with a template instead of doing it all by my self from scratch. I discoverd during the way that it took me much more time to try to change the prewritten scripts then it would have done if I just started from scratch. Al though it has been a good experience with alot of lessons.
+
+
+---
+# Deployment
+
+## Setting up
+---
+The website of this project requires back-end technologies such as server, application, and database so the website is deployed in [Heroku](https://www.heroku.com/), which is a cloud platform with a service supporting several programming languages, because GitHub can only host a static website. Heroku Postgres is used for the database, which is also a cloud-based platform, is used to store static files and images as Heroku has [no files system to store new files
+
+
+## Setting up Heroku App
+---
+- Create an app in Heroku. Click *New*, put App name and select region.
+- Add Heroku Postgres for the database.
+- Install `gunicorn`, `dj_database_url` and `psycopg2-binary` to use Heroku Postgres, and run `pip3 freeze > requirements.txt` command to add them on requirments.txt.
+- Update `settings.py` of the app. Import `dj_database_url`, comment out sqlite databases and add dj databases variable temporary while the database is transferred to Heroku Postgres.
+- Run `python3 manage.py showmigrations` command to see the status of migrations (Currently not migrated). Run `python3 manage.py migrate` command to migrate.
+- Create a super user with `python3 manage.py createsuperuser` command for product admin.
+- Create a **Procfile** which specifies the commands that are executed by the app on startup.
+- Temporary disable collectstatic by setting `heroku config:set DISABLE_COLLECTSTATIC = 1` and host name of Heroku to allowed hosts in `settings.py`.
+- Generate a new secret key, set it up in Heroku and update `settings.py`. Change the setting of Debug mode that only True in Development mode.
+
+
+## Deployment through Heroku
+---
+- Navigate to the "Deploy" section.
+- Scroll down to "Deployment Method" and select "GitHub".
+- Authorize the connection of Heroku to GitHub.
+- Search for your GitHub repository name, and select the correct repository.
+- For Deployment there are two options, Automatic Deployments or Manual.
+- Automatic Deployment: This will prompt Heroku to re-build your app each time you push your code to GitHub.
+- Manual Deployment: This will only prompt Heroku to build your app when you manually tell it to do so.
+- Ensure the correct branch is selected "master/Main", and select a deployment method. For this project I chose Manual Deployment.
+
+
+## How to Fork the respository
+---
+- Log into GitHub.
+- In Github go to (https://github.com/Sndrahel/Handywoman.git).
+- In the top right hand corner click "Fork".
+- A copy of the repository will then be added to your repositories page.
+
+## How to clone the repository
+---
+- Go to the GitHub repository.
+- Locate the Code button which is to the left of the green gitpod button and click it.
+- Select if you prefer to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard.
+- Open Git Bash.
+- Change the current working directory to the one where you want the cloned directory.
+- Type git clone and paste the URL from the clipboard.
+- Press Enter to create your local clone.
+
+ 
+---
+# Credits
+
+## Code:
+- [Code Institute](https://codeinstitute.net/) - Inspiration of blog layout were taken from tutorial.
+- [Youtube]() - Tutorial used for setting up sending email .  
+- [Stack Overflow](https://stackoverflow.com/) - Was used to find solutions and debugging.
+- [GitHub]() - Inspiration of structure for this README file were adapted from this site. 
+- [GitHub]( - Inspiration of structure and contactforms were adapted from this site. 
+- [GitHub]() - Inspiration of layout for main site were adapted from this site.
+ 
+
+## Acknowledgments:
+
+- Nishant Kumar: My Code Institute mentor who guided me through this process and shared a lot of valuable knowledge.
+
+
+[Back to Table of contents](#table-of-contents)
