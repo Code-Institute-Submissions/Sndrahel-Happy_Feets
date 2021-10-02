@@ -35,7 +35,7 @@ Feel Free to visit the live website: [Happy Feets]()
 
 ## Strategy
 
-The purpose of this project is to build a site where women connect and exchange knowledge and services
+
 
 ## Scope
 
@@ -113,7 +113,7 @@ Pictures used in this site are taken from:
 
 ### Base
 
-![Landing Page](media/landing_page.png)
+![Landing Page]()
 
 The landing page contains two background image with diffrent styles and some text and call to action buttons. 
 
