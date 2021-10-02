@@ -1,0 +1,34 @@
+[
+    {
+        "pk": 1,
+        "model": "treatments.categories",
+        "fields": {
+            "name": "medically_foot_care",
+            "friendly_name": "Medically Foot Care"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "treatments.categories",
+        "fields": {
+            "name": "wellnes_foot_care",
+            "friendly_name": "Wellnes Foot Care"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "treatments.categories",
+        "fields": {
+            "name": "seasonal_treatments",
+            "friendly_name": "Seasonal Treatments"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "treatments.categories",
+        "fields": {
+            "name": "all_treatments",
+            "friendly_name": "All Treatments"
+        }
+    }
+]
