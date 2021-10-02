@@ -31,7 +31,7 @@ body {
     background-color: #165e08c2;
 }
 
-.shop-now-button {
+.read-more-button {
     background: black;
     color: white;
     min-width: 260px;
@@ -55,9 +55,9 @@ body {
     color: white !important;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.read-more-button:hover,
+.read-more-button:active,
+.read-more-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {

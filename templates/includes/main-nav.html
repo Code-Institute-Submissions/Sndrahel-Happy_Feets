@@ -13,14 +13,14 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'treatments' %}" id="treatments-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="" id="all_treatments-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Treatments
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="treatments-link">
                 <a href="" class="dropdown-item">Medically Foot Care</a>
                 <a href="" class="dropdown-item ">Wellness Foot Care</a>
                 <a href="" class="dropdown-item ">Seasonal Treatments</a>
-                <a href="" class="dropdown-item">All Treatments</a>
+                <a href="{% url 'treatments' %}" class="dropdown-item">All Treatments</a>
             </div>
         </li>
 
