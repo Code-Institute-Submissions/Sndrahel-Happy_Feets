@@ -9,13 +9,8 @@ def all_treatments(request):
 
     treatments = Package.objects.all()
     query = None
-    categories = None
 
     if request.GET:
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            treatments = treatments.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
 
         """ View to filter packages through search bar """
         if 'q' in request.GET:
@@ -32,7 +27,6 @@ def all_treatments(request):
     context = {
         'treatments': treatments,
         'search_term': query,
-        'current_categories': categories,
     }
 
     return render(request, 'treatments/treatments.html', context)
