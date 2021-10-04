@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Package, Category
+from .models import Package
 
 
 def all_treatments(request):
@@ -33,7 +33,7 @@ def all_treatments(request):
 
 
 def package_detail(request, package_id):
-    """ A view to sjow individual package """
+    """ A view to show individual package """
 
     package = get_object_or_404(Package, pk=package_id)
 
