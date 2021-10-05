@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('friendly_name', models.CharField(blank=True, max_length=254)),
             ],
             options={
-                'verbose_name_plural': 'Category',
+                'verbose_name_plural': 'Categories',
             },
         ),
         migrations.CreateModel(
