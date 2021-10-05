@@ -26,8 +26,8 @@
     </div>
 </div>
 
-<!-- Code below for testimonial snippet and shop snippet adapted from: https://bootsnipp.com/snippets/O54eO -->
-<!-- Testimonial snippet-->
+<!-- Code below for treatments snippet and shop snippet adapted from: https://bootsnipp.com/snippets/O54eO -->
+<!-- Treatments snippet-->
 <div class="container jumbotron my-5">
     <div class="row">
         <div class="col-md-6 how-img">
@@ -77,106 +77,130 @@
         </div>
     </div>
 </div>
+
+<!-- Code below for testimonial snippet adapted from: https://bbbootstrap.com/snippets/bootstrap-5-user-testimonial-star-ratings-51527336 -->
 <!-- Testimonial snippet -->
-<div class="container jumbotron my-5">
-    <div class="row">
-        <div class="col-md-12">
+<div class="container my-5">
+    <h2 class="text-center text-uppercase">Testimonials Carousel</h2>
+    <div class="container jumbotron">
+        <div class="row g-2">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="single-box">
-                                    <div class="testimonial-img">
-                                        <img src="{{ MEDIA_URL }}guy-image.png" alt="Picture of a guy">
+                <div class="col-md-12">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row g-2">
+                                <div class="col-md-4">
+                                    <div class="card p-3 text-center px-4">
+                                        <div class="user-img">
+                                            <img src="{{ MEDIA_URL }}guy-image.png" class="rounded-circle" width="80" alt="Picture of a guy">
+                                        </div>
+                                        <div class="user-content">
+                                            <h3 class="mb-0">Person One</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+                                                quaerat atque quam similique, quo,
+                                                animi!
+                                            </p>
+                                        </div>
+                                        <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
                                     </div>
-                                    <div class="testimonial-text">
-                                        <h2>Person One</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quaerat atque quam similique, quo, 
-                                        animi eveniet minus numquam voluptatem optio reiciendis deleniti unde sed repellat quas repellendus a quod!
-                                        </p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card p-3 text-center px-4">
+                                        <div class="user-img">
+                                            <img src="{{ MEDIA_URL }}girl-image.png" class="rounded-circle" width="80" alt="Picture of a girl">
+                                        </div>
+                                        <div class="user-content">
+                                            <h3 class="mb-0">Person Two</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+                                                quaerat atque quam similique, quo,
+                                                animi!
+                                            </p>
+                                        </div>
+                                        <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card p-3 text-center px-4">
+                                        <div class="user-img">
+                                            <img src="{{ MEDIA_URL }}guy-image.png" class="rounded-circle" width="80" alt="Picture of a guy">
+                                        </div>
+                                        <div class="user-content">
+                                            <h3 class="mb-0">Person Three</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+                                                quaerat atque quam similique, quo,
+                                                animi!
+                                            </p>
+                                        </div>
+                                        <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="single-box">
-                                    <div class="testimonial-img">
-                                        <img src="{{ MEDIA_URL }}girl-image.png" alt="Picture of a girl">
-                                    </div>
-                                    <div class="testimonial-text">
-                                        <h2>Person Two</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quaerat atque quam similique, quo, 
-                                        animi eveniet minus numquam voluptatem optio reiciendis deleniti unde sed repellat quas repellendus a quod!
-                                        </p>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card p-3 text-center px-4">
+                                        <div class="user-img">
+                                            <img src="{{ MEDIA_URL }}guy-image.png" class="rounded-circle" width="80" alt="Picture of a guy">
+                                        </div>
+                                        <div class="user-content">
+                                            <h3 class="mb-0">Person Four</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+                                                quaerat atque quam similique, quo,
+                                                animi!
+                                            </p>
+                                        </div>
+                                        <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="single-box">
-                                    <div class="testimonial-img">
-                                        <img src="{{ MEDIA_URL }}guy-image.png" alt="Picture of a guy">
+                                <div class="col-md-4">
+                                    <div class="card p-3 text-center px-4">
+                                        <div class="user-img">
+                                            <img src="{{ MEDIA_URL }}girl-image.png" class="rounded-circle" width="80" alt="Picture of a girl">
+                                        </div>
+                                        <div class="user-content">
+                                            <h3 class="mb-0">Person Five</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+                                                quaerat atque quam similique, quo,
+                                                animi!
+                                            </p>
+                                        </div>
+                                        <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
                                     </div>
-                                    <div class="testimonial-text">
-                                        <h2>Person Three</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quaerat atque quam similique, quo, 
-                                        animi eveniet minus numquam voluptatem optio reiciendis deleniti unde sed repellat quas repellendus a quod!
-                                        </p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card p-3 text-center px-4">
+                                        <div class="user-img">
+                                            <img src="{{ MEDIA_URL }}guy-image.png" class="rounded-circle" width="80" alt="Picture of a guy">
+                                        </div>
+                                        <div class="user-content">
+                                            <h3 class="mb-0">Person Six</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+                                                quaerat atque quam similique, quo,
+                                                animi!
+                                            </p>
+                                        </div>
+                                        <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="single-box">
-                                    <div class="testimonial-img">
-                                        <img src="{{ MEDIA_URL }}guy-image.png" alt="Picture of a guy">
-                                    </div>
-                                    <div class="testimonial-text">
-                                        <h2>Person Four</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quaerat atque quam similique, quo, 
-                                        animi eveniet minus numquam voluptatem optio reiciendis deleniti unde sed repellat quas repellendus a quod!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="single-box">
-                                    <div class="testimonial-img">
-                                        <img src="{{ MEDIA_URL }}girl-image.png" alt="Picture of a girl">
-                                    </div>
-                                    <div class="testimonial-text">
-                                        <h2>Person Five</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quaerat atque quam similique, quo, 
-                                        animi eveniet minus numquam voluptatem optio reiciendis deleniti unde sed repellat quas repellendus a quod!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="single-box">
-                                    <div class="testimonial-img">
-                                        <img src="{{ MEDIA_URL }}guy-image.png" alt="Picture of a guy">
-                                    </div>
-                                    <div class="testimonial-text">
-                                        <h2>Person Six</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quaerat atque quam similique, quo, 
-                                        animi eveniet minus numquam voluptatem optio reiciendis deleniti unde sed repellat quas repellendus a quod!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div> 
         </div>
     </div>
 </div>
