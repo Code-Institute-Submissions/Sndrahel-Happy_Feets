@@ -99,9 +99,9 @@ Website contains:
 
 I've created WireFrames using Balsamiq and have included the links to access them below, and they are the core pages of the website.
 
-- [Desktop]()
-- [Tablet]()
-- [Mobile]()
+- [Desktop](readme_data/wireframes/wireframe-desktop.png)
+- [Tablet](readme_data/wireframes/wireframe-tablet.png)
+- [Mobile](readme_data/wireframes/wireframe-mobile.png)
 
 
 ### Database Schema
