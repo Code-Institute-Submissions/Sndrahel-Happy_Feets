@@ -12,7 +12,7 @@ Happy Feets is....
 
 This project is my final milstone project for Code Institute and is for educational purposes only.
 
-Feel Free to visit the live website: [Happy Feets]() 
+View the live website: [Happy Feets](https://happy-feetss.herokuapp.com/) 
 
 ---
 # Table of contents
@@ -23,6 +23,8 @@ Feel Free to visit the live website: [Happy Feets]()
         - [User stories](#user-stories)
     - [Structure of the website](#structure-of-the-website)
     - [Skeleton](#skeleton)
+        - [Wireframes](#wireframes)
+        - [Database Schema](#databese-schema)
     - [Surface](#surface)
 - [Features](#features)
 - [Technologies used](#technologies-used)
@@ -54,21 +56,30 @@ Based on the requirements of achieving user's and owner's goals and stories, bel
 
 ### User Stories
 
-**ID** | **As a/an** | **I want to be able to...** | **So that I can**
---- | --- | --- | ---
-1 | Site User | find responsive ,rich media , with a simple navbar | have a nice user experience
-2 | Site User | easily navigate through the website | understand what this website provide
-3 | Site User | view a list of services | select one to that suits
-4 | Site User | view services details | see description and ask for a qoute
-5 | Site User | read blog post about news and tips 
-6 | Site User | register an account | comment and share experience
-7 | Site User | contact the aministrator of the site | get more information
-8 | Site User | get a quotation for service
-9 | Administrator | have access to all the functionalities available as a simple user | controll the site and its content
-10 | Administrator | add new content | keep the site up to date
-11 | Administrator | create, read, update and delete content | manage my site content
-12 | Administrator | approve or disapprove comments| filter out objectionable comments
-
+- Customers
+    - User experience
+        - As a customer, I would like to be able to navigate the website easily.
+        - As a customer, I would like to see what the website is providing.
+        - As a customer, I would like to see some information about the company.
+        - As a customer, I would like to be able to contact the company.
+    - User booking treatments / shopping
+        - As a customer, I would like to search for all the packages/products the company sells.
+        - As a customer, I would like to see the package/product price and description.
+        - As a customer, I would like to be able to add products to my shopping cart.
+        - As a customer, I would like to be able to edit my shopping cart.
+        - As a customer, I would like to be able to checkout easily.
+        - As a customer, I would like to receive confirmation of my order.
+    - User account
+        - As a customer, I would like to save my details to an account.
+        - As a customer, I would like to see my previous order details.
+        - As a customer, I would like to leave a review of the company.
+- Website owner
+    - Site management
+        - As the business owner, I would like to be able to edit and add products easily.
+        - As the business owner, I would like to be able to delete products.
+        - As the business owner, I would like to have access to an admin section. 
+        - As the business owner, I would like my customers to be able to shop on the site easily.
+---
 
 ## Structures of the website
 
@@ -86,21 +97,30 @@ Website contains:
 
 ### Wireframes
 
-The website is created as a desktop-first because it is easy to picture the whole image of the website, however, it is a fully mobile responsive website as well so users using a mobile phone have no difficulties toggeling the site. Below are the wireframes of the core pages of the website.
+I've created WireFrames using Balsamiq and have included the links to access them below, and they are the core pages of the website.
 
 - [Desktop]()
 - [Tablet]()
 - [Mobile]()
 
 
+### Database Schema
+
+The database diagram shows a list of items in each object and relationships between each object. I've used Django default databases SQLite in gitpod environment and PostgreSQL database with Heroku as production enviroment.
+
+- [Database Schema](readme_data/database/database-schema.png)
+
+
 ## Surface
 
+### Colors
+Colours used in a project:
 
-### Design
+### Fonts
+As a main font I used...
 
-
-### Media 
-Pictures used in this site are taken from:
+### Images
+Images used in this site are taken from:
 - [Freepik](https://freepik.com/)
 - [Pexels](https://www.pexels.com/)
 - [Unsplash](https://unsplash.com/)
@@ -115,20 +135,20 @@ Pictures used in this site are taken from:
 
 ![Landing Page]()
 
-The landing page contains two background image with diffrent styles and some text and call to action buttons. 
+The landing page contains one fixed background image. User will see on landing page:
+- Welcome Hero image
+- Treatments information
+- Shop information
+- Testimonial snippet
+- Classic footer with contact information
+
+All links/snippets will contain a call to action button that redirect to selected subsite.
 
 ### Navbar
 
 ![Navbar]()
 
-The navigation bar at the top of each page of the website enables the user to easily access all pages of the website. On smaller devices, the navbar transforms into a burger menu, where links are only visible in a dropdown menu.
-
-
-### Services Selection
-
-![Services]()
-
-This is where the users can read more detailed information about services that offers. The services card displays a button from where the users will have a direct access to the contact/request page.
+Navigation bar is located on the top of the website. It is responsive and transforms into a burger menu on smaller devices. Brand logo is located in the top left corner. It is a link and it always redirect user to the home page. Page links are in the center of the main header and underneath the search field. There are two different views of the navigation bar - one view to all users, and the other to those users who are logged in to the website.
 
 
 ### About Us
@@ -138,41 +158,99 @@ This is where the users can read more detailed information about services that o
 This is where the users can read more detailed information about what the site is about and who the persons behind it are. 
 
 
-### Blog Page
+### Treatments Selection
 
-![Blog]()
+![Treatments]()
 
-The blog page displays an overview of all published blog posts for readers to scroll through. It also has a sidebar panel with a welcome message to users to tell them more about the blog and how often to come back for new blog posts. Logged in users can also comment on posted articles. Before comments are posted on the site they have to be approved by the admin. 
+This is where the users can read more detailed information about treatments and packages. This page shows all available treatments.
+From here user is encourage to buy a different packages.
 
-
-### Contact Page
-
-![Contact]()
-
-On the contact page, a form is available for the user to send messages to the admin of the site or to send a request for service. The form contain the fields Name, email, subject, service sellection and message. 
+For administrator here are an options to `Edit` or `Delete` packages.
 
 
-### Sign up a new user
+### Shop
 
-![Sign up]()
+![Shop]()
 
-When accessing the sign up screen, the user must choose a username, password and fill in a email for access to the commenting on the blog-platform.
+This page offers products and has the same set up as Treatments. 
+
+
+### Package/Product details
+
+From this site user can select quantity, add selected package/product to the bag, view a bag or go back to treatments/shop site to view the whole asortment.
+
+
+### Shopping Bag
+
+![Shopping Bag]()
+
+User can see all selected packages/products on the shopping bag page.
+Update link is available to increase or decrease amount of packages/products.
+Remove link will remove selected package/product.
+Buttons below total amount to pay give an options to: go back and add more packages/products or go to secure checkout.
+
+
+### Checkout
+
+![Checkout]()
+
+Secure checkout page allow user to add all nesesary ditails to place an order.
+On right hand site of the screen there is order summary. A test purchase can be made with the following details:
+- credit card: 4242 4242 4242 4242
+- expiration date: 04 / 24
+- CVC: 424
+- ZIP: 42424
+
+Complete order will submit a payment and redirect to order confirmation page.
+Also user can go back to the bag to adjust shopping bag.
+
+
+### Checkout success - Thank you
+
+![Checkout Success]()
+
+After purchase customer can see order summary and to buttons:
+- Go back to home page - user will be redirected do home page
+- Contact Us to book a space - user will be redirected to contact us page.
+
+
+### Reigster
+
+![Register]()
+
+Simple registration form that allow user to register on the page.
 
 
 ### User Login
 
 ![Login]()
 
-On the login screen, the user is asked to fill in his/her login and password for access. 
+Login form that allow user to login on the page.
 
-### Blog Management
 
-The blog management are only accessible to the admin of the website. The admin must approve comments before they are posted. The admin can edit, delete, and add blog posts. 
+### My Profile
+
+![Profile]()
+
+If user is logged in then is able to view its profile. Options to update a profile or to browse order history are available.
+
+
+### Contact Me
+
+![Contact]()
+
+This is just a mainly email link in the footer where user can contact the business owner to book a treatment, ask a question or make any other enquiry.
+
+
+### Add Treatment / Product
+
+This option is available to administrator only. Form allows to add name, description, image url or select an image from local storage.
+
 
 
 ## Features Left to Implement:
 
-- 
+- Add blog/news site 
 - 
 - 
 - 
