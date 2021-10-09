@@ -10,8 +10,24 @@ def all_treatments(request):
     treatments = Package.objects.all()
     query = None
     categories = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                treatments = treatments.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            treatments = treatments.order_by(sortkey)
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             treatments = treatments.filter(category__name__in=categories)
@@ -29,10 +45,13 @@ def all_treatments(request):
                 description__icontains=query)
             treatments = treatments.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'treatments': treatments,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'treatments/treatments.html', context)
