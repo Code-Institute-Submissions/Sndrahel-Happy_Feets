@@ -96,54 +96,6 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* Testimonial snippet */
-
-.user-content p {
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-.carousel-indicators {
-    left: 0;
-    top: auto;
-    bottom: -70px;
-    color: #000;
-}
-
-.carousel-indicators li {
-    background: #000;
-    height: 1px;
-    border-radius: 50%;
-}
-
-.carousel-control-prev {
-    color: #000;
-}
-
-.carousel-indicators .active {
-    background: #165e08c2;
-}
-
-.ratings i {
-    color: goldenrod;
-}
-
-/* Footer */
-
-.footer-wrapper{
-    background-color: #165e08c2;
-    padding-top: 20px;
-    color: white;
-}
-
-.footer-links {
-    color: white;
-}
-
-.footer-icons {
-    color: white;
-}
-
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -211,6 +163,55 @@ input[name='q']::placeholder {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* Testimonial snippet */
+
+.user-content p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.carousel-indicators {
+    left: 0;
+    top: auto;
+    bottom: -70px;
+    color: #000;
+}
+
+.carousel-indicators li {
+    background: #000;
+    height: 1px;
+    border-radius: 50%;
+}
+
+.carousel-control-prev {
+    color: #000;
+}
+
+.carousel-indicators .active {
+    background: #165e08c2;
+}
+
+.ratings i {
+    color: goldenrod;
+}
+
+/* Footer */
+
+.footer-wrapper{
+    background-color: #165e08c2;
+    padding-top: 20px;
+    color: white;
+}
+
+.footer-links {
+    color: white;
+}
+
+.footer-icons {
+    color: white;
+}
+
 
 /* -------------------------------- Media Queries */
 
