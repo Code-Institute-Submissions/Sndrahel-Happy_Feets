@@ -24,6 +24,7 @@ class Package(models.Model):
     name = models.CharField(max_length=300)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(
         max_length=2000, blank=True)
     image = models.ImageField(blank=True)
