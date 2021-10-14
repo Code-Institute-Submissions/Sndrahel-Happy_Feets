@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Package, Category
+from .forms import PackageForm
 
 
 def all_treatments(request):
@@ -68,3 +69,16 @@ def package_detail(request, package_id):
     }
 
     return render(request, 'treatments/package_detail.html', context)
+
+
+def add_package(request):
+    """ Add a package to the store """
+    form = PackageForm()
+    template = 'treatments/add_package.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
