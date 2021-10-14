@@ -73,7 +73,17 @@ def package_detail(request, package_id):
 
 def add_package(request):
     """ Add a package to the store """
-    form = PackageForm()
+    if request.method == 'POST':
+        form = PackageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added package!')
+            return redirect(reverse('add_package'))
+        else:
+            messages.error(request, 'Failed to add package. Please ensure the form is valid.')
+    else:
+        form = PackageForm()
+     
     template = 'treatments/add_package.html'
     context = {
         'form': form,
@@ -82,3 +92,25 @@ def add_package(request):
     return render(request, template, context)
 
 
+def edit_package(request, package_id):
+    """ Edit a package in the store """
+    package = get_object_or_404(Package, pk=package_id)
+    if request.method == 'POST':
+        form = PackageForm(request.POST, request.FILES, instance=package)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated package!')
+            return redirect(reverse('package_detail', args=[package.id]))
+        else:
+            messages.error(request, 'Failed to update package. Please ensure the form is valid.')
+    else:
+        form = PackageForm(instance=package)
+        messages.info(request, f'You are editing {package.name}')
+
+    template = 'treatments/edit_package.html'
+    context = {
+        'form': form,
+        'package': package,
+    }
+
+    return render(request, template, context)
