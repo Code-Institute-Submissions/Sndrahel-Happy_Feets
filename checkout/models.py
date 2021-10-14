@@ -1,6 +1,7 @@
 import uuid
 from django.db import models
 from django.db.models import Sum
+from django.conf import settings
 
 from treatments.models import Package
 from profiles.models import UserProfile
@@ -35,7 +36,7 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         """
         # self.total = 420
-        self.total = self.lineitems.aggregate(
+        self.order_total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.save()
 
