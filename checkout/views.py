@@ -46,7 +46,7 @@ def checkout(request):
             'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
         }
-        
+
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)

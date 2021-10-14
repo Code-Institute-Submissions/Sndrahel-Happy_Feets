@@ -1,7 +1,7 @@
 from django.http import HttpResponse
-
 from .models import Order, OrderLineItem
 from treatments.models import Package
+from profiles.models import UserProfile
 
 import json
 import time
@@ -32,12 +32,24 @@ class StripeWH_Handler:
 
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
-        total = round(intent.charges.data[0].amount / 100, 2)
+        order_total = round(intent.charges.data[0].amount / 100, 2)
 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
+
+        # Update profile information if save_info was checked
+        profile = None
+        username = intent.metadata.username
+        if username != 'AnonymousUser':
+            profile = UserProfile.objects.get(user__username=username)
+            if save_info:
+                profile.default_phone_number = shipping_details.phone
+                profile.default_street_address1 = shipping_details.address.line1
+                profile.default_postcode = shipping_details.address.postal_code
+                profile.default_town_or_city = shipping_details.address.city
+                profile.save()
 
         order_exists = False
         attempt = 1
@@ -50,6 +62,7 @@ class StripeWH_Handler:
                     street_address1__iexact=shipping_details.address.line1,
                     postcode__iexact=shipping_details.address.postal_code,
                     town_or_city__iexact=shipping_details.address.city,
+                    order_total=order_total,
                     original_bag=bag,
                     stripe_pid=pid,
                 )
@@ -67,6 +80,7 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.create(
                     full_name=shipping_details.name,
+                    user_profile=profile,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
                     street_address1=shipping_details.address.line1,
