@@ -1,0 +1,106 @@
+[
+    {
+        "pk": 1,
+        "model": "shop.product",
+        "fields": {
+            "sku": "product0001",
+            "name": "Feet Treatment Set",
+            "description": "Treatment set for feets .... bla bla",
+            "price": 20.00,
+            "category": 1,
+            "image_url": "",
+            "image": ""
+        }
+    },
+    {
+        "pk": 2,
+        "model": "shop.product",
+        "fields": {
+            "sku": "product0002",
+            "name": "Feet Treatment Set",
+            "description": "Treatment set for feets .... bla bla",
+            "price": 35.00,
+            "category": 1,
+            "image_url": "",
+            "image": ""
+        }
+    },
+    {
+        "pk": 3,
+        "model": "shop.product",
+        "fields": {
+            "sku": "product0003",
+            "name": "Feet Treatment Set",
+            "description": "Treatment set for feets .... bla bla",
+            "price": 50.00,
+            "category": 1,
+            "image_url": "",
+            "image": ""
+        }
+    },
+    {
+        "pk": 4,
+        "model": "shop.product",
+        "fields": {
+            "sku": "product0004",
+            "name": "Feet Treatment Set",
+            "description": "Treatment set for feets .... bla bla",
+            "price": 80.00,
+            "category": 1,
+            "image_url": "",
+            "image": ""
+        }
+    },
+    {
+        "pk": 5,
+        "model": "shop.product",
+        "fields": {
+            "sku": "product0005",
+            "name": "Socks",
+            "description": "Socks with special .... bla bla",
+            "price": 5.00,
+            "category": 2,
+            "image_url": "",
+            "image": ""
+        }
+    },
+    {
+        "pk": 6,
+        "model": "shop.product",
+        "fields": {
+            "sku": "product0006",
+            "name": "Socks",
+            "description": "Socks with special .... bla bla",
+            "price": 10.00,
+            "category": 2,
+            "image_url": "",
+            "image": ""
+        }
+    },
+    {
+        "pk": 7,
+        "model": "shop.product",
+        "fields": {
+            "sku": "product0007",
+            "name": "Socks",
+            "description": "Socks with special .... bla bla",
+            "price": 15.00,
+            "category": 2,
+            "image_url": "",
+            "image": ""
+        }
+    },
+    {
+        "pk": 8,
+        "model": "shop.product",
+        "fields": {
+            "sku": "product0008",
+            "name": "Gift Card",
+            "description": "Gift Card with free value .... bla bla",
+            "price": 10.00,
+            "category": 3,
+            "image_url": "",
+            "image": ""
+        }
+    }
+]
