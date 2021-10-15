@@ -31,6 +31,7 @@
                         {% else %}
                             {{ field }}
                         {% endif %}
+                    {% endfor %}
                     <div class="text-right">
                         <a class="btn btn-outline-black rounded-0" href="{% url 'treatments' %}">Cancel</a>
                         <button class="btn btn-black rounded-0" type="submit">Add Package</button>
