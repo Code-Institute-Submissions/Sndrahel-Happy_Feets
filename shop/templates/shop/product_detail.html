@@ -30,8 +30,8 @@
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    {% if product.get_rating == 0 %}
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.get_rating|floatformat:1 }} / 5</small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
@@ -87,6 +87,69 @@
                     </form>
                 </div>
             </div>
+            <hr>
+        <div>
+            <h2 class="mx-4 mt-3">Customer Reviews</h2>
+            <div>
+                {% for review in product.reviews.all %}
+                    <div class="reviews-wrapper">
+                        <p>
+                            <strong>Date: </strong>{{ review.date_added|date:"d-m-Y"}}<br>
+                            <strong>Stars: </strong>{{ review.stars}} <i class="fas fa-star"></i><br>
+                            <strong>{{ request.user }}</strong><br>
+                        </p>
+                        {{ review.content }}<br><br>
+                    </div>
+                <!-- If no reviews have been added show message -->    
+                {% empty %}
+                    <div class="reviews-wrapper">
+                        No reviews yet!
+                    </div>
+                {% endfor %}
+            </div>
+            <br><br>
+            <!-- If user is signed in, allow them to add a review --> 
+            <div class="reviews-wrapper">
+                {% if request.user.is_authenticated %}
+                <hr>
+                    <form method="POST" action=".">
+                        {% csrf_token %}
+                        
+                        <h4>Add Your Product Review Below</h4>
+                        <div class="field">
+                            <label>Stars</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select name="stars">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3" selected>3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Your Review</label>
+
+                            <div class="control">
+                                <textarea class="textarea" name="content"></textarea>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button class="btn btn-black mt-3">Submit Review</button>
+                            </div>
+                        </div>
+                    </form>
+                <!-- If user isn't signed in, ask them to sign in to leave a review -->    
+                {% else %}
+                    <p class="mx-2 review-notification">Please sign it to add your review!</p>
+                {% endif %}
+            </div>
+            <br><br>
+        </div>
         </div>
     </div>
 {% endblock %}

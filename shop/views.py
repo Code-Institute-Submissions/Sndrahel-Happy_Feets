@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from .models import Product, Category, ProductReview
 from .forms import ProductForm
 
 
@@ -64,6 +64,21 @@ def product_detail(request, product_id):
     """ A view to show individual shop products """
 
     product = get_object_or_404(Product, pk=product_id)
+
+    # Add product review (Code below adapted from: https://amethyst-lynx-91ku816p.ws-eu17.gitpod.io/)
+
+    if request.method == 'POST' and request.user.is_authenticated:
+        stars = request.POST.get('stars', 5)
+        content = request.POST.get('content', '')
+        user = request.POST.get('user', '')
+
+        review = ProductReview.objects.create(
+            product=product, user=request.user, stars=stars,
+            content=content)
+
+        return redirect('product_detail', product_id)
+
+    # Product Review code ends here
 
     context = {
         'product': product,
