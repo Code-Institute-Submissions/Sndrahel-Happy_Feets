@@ -25,7 +25,6 @@ class Product(models.Model):
     name = models.CharField(max_length=300)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(
         max_length=2000, blank=True)
     image = models.ImageField(blank=True)
@@ -33,7 +32,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-# Add Rating to Product Description. Code adapted from: https://amethyst-lynx-91ku816p.ws-eu17.gitpod.io/
+ # Code adapted from https://github.com/SteinOveHelset/saulgadgets/blob/master/apps/store/models.py
     def get_rating(self):
         total = sum(int(review['stars']) for review in self.reviews.values())
 
