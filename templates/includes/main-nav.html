@@ -1,25 +1,25 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link"
+            <a class="logo-font font-weight-bold nav-link mr-5" href="{% url 'home' %}" id="home-link"
                 aria-haspopup="true" aria-expanded="false">
                 Home
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'about' %}" id="about-link"
+            <a class="logo-font font-weight-bold nav-link mr-5" href="{% url 'about' %}" id="about-link"
                 aria-haspopup="true" aria-expanded="false">
                 About
             </a>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'shop' %}"
-                id="all_treatments-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="{% url 'shop' %}"
+                id="treatments-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Treatments
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all_treatments-link">
+            <div class="dropdown-menu border-0" aria-labelledby="treatments-link">
                 <a href="{% url 'shop' %}?category=medically_foot_care" class="dropdown-item">Medically Foot Care</a>
                 <a href="{% url 'shop' %}?category=wellness_foot_care" class="dropdown-item ">Wellness Foot Care</a>
                 <a href="{% url 'shop' %}?category=seasonal_treatments" class="dropdown-item ">Seasonal Treatments</a>
@@ -29,11 +29,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'shop' %}"
-                id="shop_products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="{% url 'shop' %}"
+                id="shop-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Shop
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="shop_products-link">
+            <div class="dropdown-menu border-0" aria-labelledby="shop-products-link">
                 <a href="{% url 'shop' %}?category=feet_treatment_set" class="dropdown-item">Feet Treatment Set</a>
                 <a href="{% url 'shop' %}?category=socks" class="dropdown-item ">Socks</a>
                 <a href="{% url 'shop' %}?category=gift_card" class="dropdown-item ">Gift Card</a>
@@ -43,7 +43,7 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown"
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="specials-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>

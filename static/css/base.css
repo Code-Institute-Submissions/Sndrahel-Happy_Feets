@@ -31,6 +31,8 @@ body {
     background-color: #165e08c2;
 }
 
+/* Buttons */
+
 .shop-now-button {
     background: black;
     color: white;
@@ -77,6 +79,25 @@ body {
     background: #000 !important;
 }
 
+/* Nav Links */
+#home-link,
+#about-link,
+#treatments-link,
+#shop-products-link,
+#specials-link {
+    color: #fff;
+}
+
+#home-link:hover,
+#about-link:hover,
+#treatments-link:hover,
+#shop-products-link:hover,
+#specials-link:hover {
+    color:black;
+    text-decoration: underline;
+}
+
+
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -96,7 +117,7 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* Bootstrap Message Toasts - from Code Institute */
 
 .message-container {
     position: fixed;
@@ -114,6 +135,7 @@ input[name='q']::placeholder {
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
 .arrow-up {
     width: 0; 
     height: 0; 
