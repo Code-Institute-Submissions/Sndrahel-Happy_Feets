@@ -3,12 +3,36 @@
         "pk": 1,
         "model": "shop.category",
         "fields": {
+            "name": "medically_foot_care",
+            "friendly_name": "Medically Foot Care"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "shop.category",
+        "fields": {
+            "name": "wellnes_foot_care",
+            "friendly_name": "Wellnes Foot Care"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "shop.category",
+        "fields": {
+            "name": "seasonal_treatments",
+            "friendly_name": "Seasonal Treatments"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "shop.category",
+        "fields": {
             "name": "feet_treatment_set",
             "friendly_name": "Feet Treatment Set"
         }
     },
     {
-        "pk": 2,
+        "pk": 5,
         "model": "shop.category",
         "fields": {
             "name": "socks",
@@ -16,11 +40,19 @@
         }
     },
     {
-        "pk": 3,
+        "pk": 6,
         "model": "shop.category",
         "fields": {
             "name": "gift_card",
             "friendly_name": "Gift Card"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "shop.category",
+        "fields": {
+            "name": "all_products",
+            "friendly_name": "All Products"
         }
     }
 ]

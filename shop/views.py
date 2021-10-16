@@ -88,7 +88,7 @@ def add_product(request):
             messages.error(request, 'Failed to add product. Please check the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'shop/add_product.html'
     context = {
         'form': form,
