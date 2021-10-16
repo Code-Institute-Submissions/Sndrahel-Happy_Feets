@@ -57,7 +57,7 @@
         "fields": {
             "sku": "product0005",
             "name": "Wellness Foot Care Basic",
-            "description": "30 min Wellnes Foot Care .... bla bla",
+            "description": "30 min Wellness Foot Care .... bla bla",
             "price": 65.00,
             "category": 2,
             "image_url": "",
@@ -70,7 +70,7 @@
         "fields": {
             "sku": "product0006",
             "name": "Wellness Foot Care Regular",
-            "description": "60 min Wellnes Foot Care .... bla bla",
+            "description": "60 min Wellness Foot Care .... bla bla",
             "price": 95.00,
             "category": 2,
             "image_url": "",
@@ -83,7 +83,7 @@
         "fields": {
             "sku": "product0007",
             "name": "Wellness Foot Care Luxury",
-            "description": "90 min Wellnes Foot Care .... bla bla",
+            "description": "90 min Wellness Foot Care .... bla bla",
             "price": 155.00,
             "category": 2,
             "image_url": "",

@@ -11,7 +11,7 @@
         "pk": 2,
         "model": "shop.category",
         "fields": {
-            "name": "wellnes_foot_care",
+            "name": "wellness_foot_care",
             "friendly_name": "Wellnes Foot Care"
         }
     },
