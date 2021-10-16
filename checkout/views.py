@@ -6,6 +6,7 @@ from django.conf import settings
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
+
 from shop.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
@@ -28,8 +29,8 @@ def cache_checkout_data(request):
         return HttpResponse(status=200)
     except Exception as e:
         messages.error(request, 'Sorry, your payment cannot be \
-            processed right now. Please try again later.')
-        return HttpResponse(content=e, status=400)
+        processed right now. Please try again later.')
+    return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
@@ -38,6 +39,7 @@ def checkout(request):
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
+
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -46,7 +48,6 @@ def checkout(request):
             'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
         }
-
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
