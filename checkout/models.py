@@ -16,6 +16,10 @@ class Order(models.Model):
     postcode = models.CharField(max_length=20, null=True, blank=True)
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
+    total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0)
+    delivery_cost = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
     original_bag = models.TextField(null=False, blank=False, default='')
@@ -33,11 +37,15 @@ class Order(models.Model):
 
     def update_total(self):
         """
-        Update grand total each time a line item is added,
+        Update order total each time a line item is added,
         """
-        # self.total = 420
-        self.order_total = self.lineitems.aggregate(
+        self.total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        if self.total < settings.FREE_DELIVERY_THRESHOLD:
+            self.delivery_cost = self.total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+        else:
+            self.delivery_cost = 0
+        self.order_total = self.total + self.delivery_cost
         self.save()
 
     def save(self, *args, **kwargs):

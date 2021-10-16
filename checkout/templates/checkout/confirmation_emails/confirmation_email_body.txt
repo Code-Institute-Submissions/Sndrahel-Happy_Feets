@@ -5,7 +5,9 @@ This is a confirmation of your order at Happy Feets. Your order information is b
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 
-Order Total: ${{ order.order_total }}
+Total: ${{ order.total }}
+Delivery Cost: €{{ order.delivery_cost }}
+Order Total: €{{ order.order_total }}
 
 Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }},
 
