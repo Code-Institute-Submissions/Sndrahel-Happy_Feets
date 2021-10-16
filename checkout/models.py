@@ -3,7 +3,7 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 
-from treatments.models import Package
+from shop.models import Product
 from profiles.models import UserProfile
 
 
@@ -57,8 +57,8 @@ class OrderLineItem(models.Model):
     order = models.ForeignKey(
         Order, null=False, blank=False,
         on_delete=models.CASCADE, related_name='lineitems')
-    package = models.ForeignKey(
-        Package, null=False, blank=False, on_delete=models.CASCADE)
+    product = models.ForeignKey(
+        Product, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(
         max_digits=6, decimal_places=2,
@@ -69,8 +69,8 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.package.price * self.quantity
+        self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'ID {self.package.id} on order {self.order.order_number}'
+        return f'ID {self.product.id} on order {self.order.order_number}'

@@ -6,7 +6,7 @@ from django.conf import settings
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
-from treatments.models import Package
+from shop.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
@@ -56,16 +56,16 @@ def checkout(request):
             order.save()
             for item_id, item_data in bag.items():
                 try:
-                    package = Package.objects.get(id=item_id)
+                    product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
-                            package=package,
+                            product=product,
                             quantity=item_data,
                         )
                         order_line_item.save()
 
-                except Package.DoesNotExist:
+                except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database."
                         "Please call us for assistance!")
@@ -83,7 +83,7 @@ def checkout(request):
         if not bag:
             messages.error(
                 request, "There's nothing in your bag at the moment")
-            return redirect(reverse('treatments'))
+            return redirect(reverse('shop'))
 
         current_bag = bag_contents(request)
         total = current_bag['total']
