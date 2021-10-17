@@ -62,10 +62,10 @@ def shop_products(request):
 
 def product_detail(request, product_id):
     """ A view to show individual shop products """
+
     product = get_object_or_404(Product, pk=product_id)
 
-    # Add review
-    # https://github.com/SteinOveHelset/saulgadgets/blob/master/apps/store/views.py
+    # Add product review (from Code with Stein)
 
     if request.method == 'POST' and request.user.is_authenticated:
         stars = request.POST.get('stars', 3)
@@ -79,7 +79,6 @@ def product_detail(request, product_id):
         return redirect('product_detail', product_id)
 
     # Review code ends here
-
     context = {
         'product': product,
     }

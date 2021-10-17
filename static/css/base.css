@@ -218,22 +218,6 @@ input[name='q']::placeholder {
     color: goldenrod;
 }
 
-/* Footer */
-
-.footer-wrapper{
-    background-color: #165e08c2;
-    padding-top: 20px;
-    color: white;
-}
-
-.footer-links {
-    color: white;
-}
-
-.footer-icons {
-    color: white;
-}
-
 
 /* -------------------------------- Media Queries */
 
@@ -324,6 +308,31 @@ input[name='q']::placeholder {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
+}
+
+/* Product Review section */
+.reviews-wrapper {
+    margin: 5px 4px 0px 25px;
+}
+
+.review-notification {
+    color: red;
+}
+
+/* Footer */
+
+.footer-wrapper{
+    background-color: #165e08c2;
+    padding-top: 20px;
+    color: white;
+}
+
+.footer-links {
+    color: white;
+}
+
+.footer-icons {
+    color: white;
 }
 
 
