@@ -62,13 +62,13 @@ def shop_products(request):
 
 def product_detail(request, product_id):
     """ A view to show individual shop products """
-
     product = get_object_or_404(Product, pk=product_id)
 
-    # Add product review (Code below adapted from: https://amethyst-lynx-91ku816p.ws-eu17.gitpod.io/)
+    # Add review
+    # https://github.com/SteinOveHelset/saulgadgets/blob/master/apps/store/views.py
 
     if request.method == 'POST' and request.user.is_authenticated:
-        stars = request.POST.get('stars', 5)
+        stars = request.POST.get('stars', 3)
         content = request.POST.get('content', '')
         user = request.POST.get('user', '')
 
@@ -78,7 +78,7 @@ def product_detail(request, product_id):
 
         return redirect('product_detail', product_id)
 
-    # Product Review code ends here
+    # Review code ends here
 
     context = {
         'product': product,
@@ -101,7 +101,8 @@ def add_product(request):
             messages.success(request, 'Product was successfully added')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please check the form is valid.')
+            messages.error(request, 'Failed to add product. \
+                Please check the form is valid.')
     else:
         form = ProductForm()
 
@@ -128,7 +129,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Product successfully updated')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please check the form is valid.')
+            messages.error(request, 'Failed to update product. \
+                Please check the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')

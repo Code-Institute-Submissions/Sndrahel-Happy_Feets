@@ -3,12 +3,13 @@ from django.contrib.auth.models import User
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=254)
-    friendly_name = models.CharField(
-        max_length=254, blank=True)
 
     class Meta:
         verbose_name_plural = 'Categories'
+
+    name = models.CharField(max_length=254)
+    friendly_name = models.CharField(
+        max_length=254, blank=True)
 
     def __str__(self):
         return self.name
@@ -32,7 +33,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
- # Code adapted from https://github.com/SteinOveHelset/saulgadgets/blob/master/apps/store/models.py
+    # Raiting and ProductReview (Code from SteinOveHelset)
     def get_rating(self):
         total = sum(int(review['stars']) for review in self.reviews.values())
 
@@ -42,7 +43,6 @@ class Product(models.Model):
             return 0
 
 
-# Product Review. Code adapted from: https://amethyst-lynx-91ku816p.ws-eu17.gitpod.io/
 class ProductReview(models.Model):
     product = models.ForeignKey(
         Product, related_name='reviews', on_delete=models.CASCADE)

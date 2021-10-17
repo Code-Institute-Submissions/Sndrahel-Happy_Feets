@@ -370,10 +370,11 @@ The website of this project requires back-end technologies such as server, appli
 
 ## Code:
 - [Code Institute](https://codeinstitute.net/) - Inspiration of blog layout were taken from tutorial.
-- [Youtube]() - Tutorial used for setting up sending email .  
+- [Youtube](https://www.youtube.com/watch?v=Y5vvGQyHtpM) - Tutorial used for adding rating and reviews to shop products.  
 - [Stack Overflow](https://stackoverflow.com/) - Was used to find solutions and debugging.
+- [GitHub](https://github.com/SteinOveHelset/saulgadgets/tree/master/apps/store) - Code for adding rating and reviews to shop products.
 - [GitHub]() - Inspiration of structure for this README file were adapted from this site. 
-- [GitHub]( - Inspiration of structure and contactforms were adapted from this site. 
+- [GitHub]() - Inspiration of structure and contactforms were adapted from this site. 
 - [GitHub]() - Inspiration of layout for main site were adapted from this site.
  
 
