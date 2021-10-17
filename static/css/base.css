@@ -1,3 +1,4 @@
+/* Styling in this file is adapted from: Code Institute Boutique Ado */
 html {
     height: 100%;
 }
@@ -218,8 +219,61 @@ input[name='q']::placeholder {
     color: goldenrod;
 }
 
+/* Product Form */
 
-/* -------------------------------- Media Queries */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+/* Product Review section */
+.reviews-wrapper {
+    margin: 5px 4px 0px 25px;
+}
+
+.review-notification {
+    color: red;
+}
+
+/* Footer 
+Style adapted from: https://github.com/ZahraSadiq/Milestone4-PosterBay/blob/master/static/css/base.css */
+
+.footer-wrapper{
+    background-color: #165e08c2;
+    padding-top: 20px;
+    color: white;
+}
+
+.footer-links {
+    color: white;
+}
+
+.footer-icons {
+    color: white;
+}
+
+/* Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -282,60 +336,6 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
-/* Product Form */
-
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    border-radius: 0;
-}
-
-/* Product Review section */
-.reviews-wrapper {
-    margin: 5px 4px 0px 25px;
-}
-
-.review-notification {
-    color: red;
-}
-
-/* Footer */
-
-.footer-wrapper{
-    background-color: #165e08c2;
-    padding-top: 20px;
-    color: white;
-}
-
-.footer-links {
-    color: white;
-}
-
-.footer-icons {
-    color: white;
-}
-
-
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -351,7 +351,8 @@ input[name='q']::placeholder {
     }
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
+/* Pad the top a bit when navbar is collapsed on mobile 
+Style adapted from: https://github.com/ZahraSadiq/Milestone4-PosterBay/blob/master/static/css/base.css */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
@@ -359,5 +360,43 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+    }
+
+    .display-4.logo-font.banner-text {
+        font-size: 2.5rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+        font-size: 0.75rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 0.75rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .btn.btn-outline-black,
+    .btn.btn-black {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.btn-lg,
+    .btn.btn-black.btn-lg
+    .shop-now-button.btn.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
     }
 }
