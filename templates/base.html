@@ -27,8 +27,8 @@
 
     {% block corejs %}
     <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
@@ -132,21 +132,21 @@
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-            {% with message.level as level %}
-                <!-- Error message level in django -->
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toast_error.html' %}
-                <!-- Warning message level in django -->
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toast_warning.html' %}
-                <!-- Success message level in django -->
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toast_success.html' %}
-                <!-- Else display info toast -->
-                {% else %}
-                    {% include 'includes/toasts/toast_info.html' %}
-                {% endif %}
-            {% endwith %}
+        {% with message.level as level %}
+        <!-- Error message level in django -->
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        <!-- Warning message level in django -->
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        <!-- Success message level in django -->
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        <!-- Else display info toast -->
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
         {% endfor %}
     </div>
     {% endif %}
@@ -163,7 +163,7 @@
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
-    
+
     {% endblock %}
 
 </body>
