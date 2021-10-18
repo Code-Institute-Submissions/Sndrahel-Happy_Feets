@@ -98,7 +98,6 @@ body {
     text-decoration: underline;
 }
 
-
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -187,7 +186,8 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/* Testimonial snippet */
+/* Testimonial snippet 
+Style adapted from: https://bbbootstrap.com/snippets/bootstrap-5-user-testimonial-star-ratings-51527336 */
 
 .user-content p {
     margin-top: 5px;
@@ -351,8 +351,7 @@ Style adapted from: https://github.com/ZahraSadiq/Milestone4-PosterBay/blob/mast
     }
 }
 
-/* Pad the top a bit when navbar is collapsed on mobile 
-Style adapted from: https://github.com/ZahraSadiq/Milestone4-PosterBay/blob/master/static/css/base.css */
+/* Pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
