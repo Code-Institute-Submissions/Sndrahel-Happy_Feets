@@ -63,18 +63,18 @@ Based on the requirements of achieving user's and owner's goals and stories, bel
         - As a customer, I would like to see the package/product price and description.
         - As a customer, I would like to be able to add products to my shopping cart.
         - As a customer, I would like to be able to edit my shopping cart.
-        - As a customer, I would like to be able to checkout easily.
+        - As a customer, I would like to be able to checkout easily and securely.
         - As a customer, I would like to receive confirmation of my order.
     - User account
         - As a customer, I would like to save my details to an account.
         - As a customer, I would like to see my previous order details.
-        - As a customer, I would like to leave a review of the company.
+        - As a customer, I would like to leave a review of the product.
 - Website owner
     - Site management
         - As the business owner, I would like to be able to edit and add products easily.
         - As the business owner, I would like to be able to delete products.
         - As the business owner, I would like to have access to an admin section. 
-        - As the business owner, I would like my customers to be able to shop on the site easily.
+        - As the business owner, I would like to be able to provide easy shopping experience for my customers.
 ---
 
 ## Structures of the website
