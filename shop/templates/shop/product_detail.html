@@ -99,8 +99,8 @@
                 {% for review in product.reviews.all %}
                 <div class="reviews-wrapper">
                     <p>
-                        <strong>Date: </strong>{{ review.date_added|date:"Y-m-d"}}<br>
-                        <strong>Stars: </strong>{{ review.stars}} <i class="fas fa-star"></i><br>
+                        <strong>Date: </strong>{{ review.date_added|date:"Y-m-d" }}<br>
+                        <strong>Stars: </strong>{{ review.stars }} <i class="fas fa-star"></i><br>
                         <strong>{{ request.user }}</strong><br>
                     </p>
                     {{ review.content }}
