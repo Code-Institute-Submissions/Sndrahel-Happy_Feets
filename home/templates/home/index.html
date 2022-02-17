@@ -20,7 +20,7 @@
             </h1>
             <div class="my-5">
                 <h4>
-                    <a href="{% url 'shop' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Book
+                    <a href="{% url 'shop' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop
                         Now</a>
                 </h4>
             </div>
@@ -31,7 +31,6 @@
 <!-- Code below for treatments snippet and shop snippet adapted from: https://bootsnipp.com/snippets/O54eO -->
 <!-- Treatments snippet-->
 
-
 <div class="container jumbotron bg-white my-3">
     <h2 class="text-center text-uppercase my-5">Treatments</h2>
     <div class="row">
@@ -41,15 +40,17 @@
         <div class="col-md-12 col-lg-6">
             <h3>Your feet will carry you all your life!</h3>
             <h4 class="subheading">Here, various treatments are offered in a calm and relaxing atmosphere. </h4>
-            <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi libero magni
-                eligendi deserunt enim dolorem, voluptate ipsam at nostrum quibusdam quod explicabo delectus, incidunt
-                laboriosam repellendus quia accusamus, similique harum. Commodi libero magni
-                eligendi deserunt enim dolorem, voluptate ipsam at nostrum quibusdam quod explicabo delectus, incidunt
-                laboriosam repellendus quia accusamus, similique harum.
+            <p class="text-muted">You will find high-quality treatments that suit everyone. Well-groomed feet are
+                not only healthy, but afterwards the feet feel softer, lighter and more relaxed.
+                If you regularly give your feet a foot care treatment, you can prevent many problems and diseases that
+                can occur on your feet. If you are diabetic, you should pay extra attention to your feet. Minor injuries
+                can lead to bigger problems and foot care is extra important to you. I give you both treatment and
+                advice on how you should take care of your feet
             </p>
             <div class="text-center my-5">
                 <h4>
-                    <a href="{% url 'shop' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-2">Book
+                    <a href="{% url 'shop' %}?category=medically_foot_care,wellness_foot_care,seasonal_treatments"
+                        class="shop-now-button btn btn-lg rounded-0 text-uppercase py-2">Book
                         Now</a>
                 </h4>
             </div>
@@ -63,18 +64,18 @@
     <h2 class="text-center text-uppercase my-5">Shop</h2>
     <div class="row">
         <div class="col-md-12 col-lg-6">
-            <h3>Everything you need for your feets</h3>
+            <h3>Shop everything you need for your feets</h3>
             <h4 class="subheading">We sell various of products for your feets. Everything from socks to calm and
                 relaxing products.</h4>
-            <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi libero magni
-                eligendi deserunt enim dolorem, voluptate ipsam at nostrum quibusdam quod explicabo delectus, incidunt
-                laboriosam repellendus quia accusamus, similique harum. Commodi libero magni
-                eligendi deserunt enim dolorem, voluptate ipsam at nostrum quibusdam quod explicabo delectus, incidunt
-                laboriosam repellendus quia accusamus, similique harum.
+            <p class="text-muted">If you are looking for foot care products such as shoe insoles, foot creams, foot
+                files or nail care products, you have come to the right place. We are a company with
+                foot care in focus. At the shop, you will find everything you can think of that concerns the
+                well-being of your feet, such as shoe insoles, foot files, support socks, foot creams and much more.
             </p>
             <div class="text-center my-5">
                 <h4>
-                    <a href="{% url 'shop' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-2">Shop
+                    <a href="{% url 'shop' %}?category=feet_treatment_set,socks,gift_card"
+                        class="shop-now-button btn btn-lg rounded-0 text-uppercase py-2">Shop
                         Now</a>
                 </h4>
             </div>
@@ -107,13 +108,13 @@
                                     </div>
                                     <div class="user-content">
                                         <h3 class="mb-0">Person One</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-                                            quaerat atque quam similique, quo,
-                                            animi!
+                                        <p>I have seen several podiatrist and she is by far the best! Was kind, thorough
+                                            and offered me a variety of treatment options. Best podiatrist out there!
                                         </p>
                                     </div>
                                     <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                                            class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                            class="fa fa-star"></i></div>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -124,13 +125,16 @@
                                     </div>
                                     <div class="user-content">
                                         <h3 class="mb-0">Person Two</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-                                            quaerat atque quam similique, quo,
-                                            animi!
+                                        <p>Monica is very professional and kind. She is
+                                            very straight forward , caring and approachable. I have been suffering from
+                                            foot issues for long time but I am now confident with her care. I would
+                                            recommend to see her if you need
+                                            good podiatrist from my heart.
                                         </p>
                                     </div>
                                     <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                                            class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                            class="fa fa-star"></i></div>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -141,9 +145,8 @@
                                     </div>
                                     <div class="user-content">
                                         <h3 class="mb-0">Person Three</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-                                            quaerat atque quam similique, quo,
-                                            animi!
+                                        <p>Awesome, friendly, knowledgeable, human & caring! Listens and you don't feel
+                                            uncomfortable.
                                         </p>
                                     </div>
                                     <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
@@ -164,9 +167,9 @@
                                     </div>
                                     <div class="user-content">
                                         <h3 class="mb-0">Person Four</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-                                            quaerat atque quam similique, quo,
-                                            animi!
+                                        <p>Very pleasant experience. Monica was knowledgeable, attentive, thorough,
+                                            leaves a very good impression of trust and caring for her patients. I will
+                                            recommend to my friends with foot problems.
                                         </p>
                                     </div>
                                     <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
@@ -182,9 +185,7 @@
                                     </div>
                                     <div class="user-content">
                                         <h3 class="mb-0">Person Five</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-                                            quaerat atque quam similique, quo,
-                                            animi!
+                                        <p>She was good, been to better podiatrist though!
                                         </p>
                                     </div>
                                     <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
@@ -199,9 +200,8 @@
                                     </div>
                                     <div class="user-content">
                                         <h3 class="mb-0">Person Six</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-                                            quaerat atque quam similique, quo,
-                                            animi!
+                                        <p>Very friendly and exceptionally knowledgable. Helped solve a problem 3 other
+                                            podiatrists could not figure out.
                                         </p>
                                     </div>
                                     <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i

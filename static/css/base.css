@@ -402,11 +402,10 @@ Style adapted from: https://github.com/ZahraSadiq/Milestone4-PosterBay/blob/mast
 
 /* MailChimp */
 #mc_embed_signup form {
-    padding-top: 0px;
+    padding: 0 !important;
     text-align: center;
 }
 
-#mc_embed_signup #mce-success-response {
+#mce-success-response {
     color: #f4f7f2;
-    display: none;
 }
