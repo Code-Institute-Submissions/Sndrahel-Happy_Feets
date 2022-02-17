@@ -89,7 +89,7 @@ The intentions should be obvious and users should know as soon as they enter the
 
 ### Marketing
 
-This site has a Facebook Business page with a link on the page footer. It can be viewed [here]()
+This site has a Facebook Business page with a link on the page footer. It can be viewed [here](https://www.facebook.com/Happy-Feets-101835319100335)
 
 Upon registering for an account, customers can check a box to receive news and offers through email via [Mailchimp](https://mailchimp.com/).
 
