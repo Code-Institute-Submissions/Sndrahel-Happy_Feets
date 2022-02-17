@@ -97,6 +97,10 @@ Upon registering, the user is redirected to a new page confirming their subscrip
 
 ### Search Engine Optimisation
 
+I have generated a sitemap.xml and robots.txt file, and only included relevant links which helps Google map the pages of the site.
+
+I have also done some research on highest searched words in podiatrist and feet treatments.
+
 <br>
 
 ---
