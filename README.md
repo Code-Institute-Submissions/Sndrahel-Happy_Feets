@@ -19,6 +19,10 @@ View the live website: [Happy Feets](https://happy-feetss.herokuapp.com/)
 
 - [UX](#ux)
     - [Strategy](#strategy)
+        - [Primary Goals](#primary-goals)
+        - [Business Model](#business-model)
+        - [Marketing](#marketing)
+        - [Search Engine Optimisation](#search-engine-optimisation)
     - [Scope](#scope)
         - [User stories](#user-stories)
     - [Structure of the website](#structure-of-the-website)
@@ -37,8 +41,65 @@ View the live website: [Happy Feets](https://happy-feetss.herokuapp.com/)
 
 ## Strategy
 
-The purpose of this project is to build a simple website that customers to buy a package or packages of choice. This website can be easily changed for different type of businesses. 
+The purpose of this project is to build a simple website for a podiatrist where customers can buy treatments or products of choice. This website can be easily changed for different type of businesses. 
 
+<br>
+
+### Primary Goals
+
+**The business owners primary goals are:**
+
+- To be able to sell treatments and products online
+
+- To have the ability to add, remove or edit products in the store
+
+- To access a customers order, edit and/or remove it if necessary
+
+- To access and keep track of customer information
+
+- To own a website which is easy to use and navigate, for all types of users on all devices.
+
+**A potential customers primary goals are:**
+
+* To be able to view details of the available treatments and products from the online store, and purchase.
+
+* To be able to register for an account
+
+* To see an order history in their account
+
+* To be able to edit their account details
+
+* To easily navigate the whole website and keep track of all user interactions, for example the products in their cart
+
+<br>
+
+### Business Model
+
+I have chosen a traditional B2C (Business to Customer without middle person) application, which has a straightforward and user friendly interface. This site offers feet treatments and products to shop for feets. 
+
+The business flow is as follows:
+
+- Happy Feets sells treatments that are performed at the clinic, and products from wholesale retailers or from the manifacturers themselvse.
+
+- The website handles selling of products or treatments from Happy Feets to the end customer, the website user.
+
+The intentions should be obvious and users should know as soon as they enter the site what it offers and how to use it's features.
+
+<br>
+
+### Marketing
+
+This site has a Facebook Business page with a link on the page footer. It can be viewed [here]()
+
+Upon registering for an account, customers can check a box to receive news and offers through email via [Mailchimp](https://mailchimp.com/).
+
+Upon registering, the user is redirected to a new page confirming their subscription. The site owner can now see the new subscriber on their audience dashboard, and new campaigns will be sent to them too.
+
+### Search Engine Optimisation
+
+<br>
+
+---
 ## Scope
 
 Based on the requirements of achieving user's and owner's goals and stories, below is the list of required pages with the features and functions:
@@ -49,6 +110,7 @@ Based on the requirements of achieving user's and owner's goals and stories, bel
 - About page where users can get information about the siteowner and the company.
 - Login / register page where users can log in or register.
 
+<br>
 
 ### User Stories
 
@@ -75,8 +137,9 @@ Based on the requirements of achieving user's and owner's goals and stories, bel
         - As the business owner, I would like to be able to delete products.
         - As the business owner, I would like to have access to an admin section. 
         - As the business owner, I would like to be able to provide easy shopping experience for my customers.
----
+<br>
 
+---
 ## Structures of the website
 
 Website contains:
@@ -86,8 +149,9 @@ Website contains:
 - The shop page will contain information of what kind of products can be bought.
 - The about page will contain information about the siteowner.
 - The footer will contains social media links.
+<br>
 
-
+---
 ## Skeleton
 
 ### Wireframes
@@ -529,6 +593,7 @@ The following process assumes that GMail will be used for sending and receiving 
 - [Stack Overflow](https://stackoverflow.com/) - Was used to find solutions and debugging.
 - [GitHub](https://github.com/SteinOveHelset/saulgadgets/tree/master/apps/store) - Code for adding rating and reviews to shop products.
 - [GitHub](https://aqua-nightingale-u38ms1hh.ws-eu17.gitpod.io/) - Inspiration of structure for this README file were adapted from this site. 
+- [GitHub](https://github.com/johnvenkiah/CI_PP5_John_Venkiah) - Inspiration of structure for this README file were adapted from this site. 
 - [GitHub](https://github.com/ZahraSadiq/Milestone4-PosterBay) - Inspiration of style and layout were adapted from this site.
  
 
