@@ -180,7 +180,7 @@ Google Lighthouse will be used to check the Performance, Accessibility, Best Pra
     
     <details>
     <summary>Click to see result</summary>
-    <img src="media/wc3_html.png" alt="HTML results" width="50%" height="50%">
+    <img src="readme_data/testing/wc3_html.png" alt="HTML results" width="50%" height="50%">
     </details>
 
     - No errors.
