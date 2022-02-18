@@ -6,7 +6,7 @@ https://github.com/johnvenkiah/CI_PP5_John_Venkiah
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
+from django.db.models import Q, F
 from django.db.models.functions import Lower
 
 from .models import Product, Category, Review
@@ -28,15 +28,29 @@ def shop_products(request):
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                shop = shop.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
-                sortkey = 'category__name'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
+        
+        if 'direction' in request.GET:
+            direction = request.GET['direction']
+
+            if sortkey == 'rating':
+                if direction == 'desc':
+                    shop = shop.order_by(
+                        F(sortkey).desc(nulls_last=True)
+                    )
+                else:
+                    shop = shop.order_by(
+                        F(sortkey).asc(nulls_first=True)
+                    )
+            else:
+                if sortkey == 'name':
+                    sortkey = 'lower_name'
+                    shop = shop.annotate(lower_name=Lower('name'))
+                if sortkey == 'category':
+                    sortkey = 'category__name'
+            
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
+            
             shop = shop.order_by(sortkey)
 
         if 'category' in request.GET:
@@ -86,7 +100,7 @@ def product_detail(request, product_id):
             messages.success(
                 request, (
                     f'Thank you for reviewing "{product.name[:25]}.."! '
-                    'You can now view and remove it below.'
+                    'You can now view your review below.'
                 )
             )
 

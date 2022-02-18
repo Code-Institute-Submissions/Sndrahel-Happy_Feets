@@ -32,6 +32,10 @@ body {
     background-color: #165e08c2;
 }
 
+.text-orange {
+    color: #ffaa42 !important;
+}
+
 /* Buttons */
 
 .shop-now-button {

@@ -95,58 +95,57 @@
 
         <!-- Product Review code adapted from: 
             https://johnvenkiah-cipp5johnven-9fgcadg9zys.ws-eu32.gitpod.io/-->
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <h3 class="lead text-orange">Customer Reviews</h3>
-                {% if reviews %}
-                <section class="review-box mb-3">
-                    {% for review in reviews %}
-                    <div class="row">
-                        <div class="col-6">
-                            <p class="text-orange">{{ review.title }}</p>
-                        </div>
-                        <div class="col-6">
-                            <p class="text-orange text-right"><i class="fas fa-star"></i> {{ review.product_rating }}/5
-                            </p>
-                        </div>
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <h3 class="lead text-orange">Customer Reviews</h3>
+            {% if reviews %}
+            <section class="review-box mb-3">
+                {% for review in reviews %}
+                <div class="row">
+                    <div class="col-6">
+                        <p class="text-orange">{{ review.title }}</p>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <small class="text-muted">{% if not review.user == None %}{{ review.user }}{% else %}Account
-                                removed{% endif %} | {{ review.date_created }}</small>
-                        </div>
+                    <div class="col-6">
+                        <p class="text-orange text-right"><i class="fas fa-star"></i> {{ review.product_rating }}/5
+                        </p>
                     </div>
-                    <p>{{ review.user_review }}</p>
-                    <hr>
-                    {% endfor %}
-                </section>
-                {% else %}
-                <!-- If no reviews display this -->
-                <p>No reviews yet.</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <small class="text-muted">{% if not review.user == None %}{{ review.user }}{% else %}Account
+                            removed{% endif %} | {{ review.date_created }}</small>
+                    </div>
+                </div>
+                <p>{{ review.user_review }}</p>
                 <hr>
-                {% endif %}
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                {% if request.user.is_authenticated %}
-                <!-- Review form -->
-                <section class="review-form">
-                    {% if reviews %}
-                    <h3 class="lead text-orange">Review this product</h3>
-                    {% else %}
-                    <h3 class="lead text-orange">Be the first to leave a review</h3>
-                    {% endif %}
-                    <form method="POST" action="{% url 'product_detail' product.id %}">
-                        {% csrf_token %}
-                        {{ review_form|crispy }}
-                        <button class="w-100 btn btn-orange" type="submit">Post Review</button>
-                    </form>
-                </section>
-                {% else %}
-                <h4 class="lead">Please <a href="{% url 'account_login' %}" class="font-weight-bold">sign in</a> to post
-                    a review.</h4>
-                {% endif %}
-            </div>
+                {% endfor %}
+            </section>
+            {% else %}
+            <!-- If no reviews display this -->
+            <p>No reviews yet.</p>
+            <hr>
+            {% endif %}
         </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            {% if request.user.is_authenticated %}
+            <!-- Review form -->
+            <section class="review-form">
+                {% if reviews %}
+                <h3 class="lead text-orange">Review this product</h3>
+                {% else %}
+                <h3 class="lead text-orange">Be the first to leave a review</h3>
+                {% endif %}
+                <form method="POST" action="{% url 'product_detail' product.id %}">
+                    {% csrf_token %}
+                    {{ review_form|crispy }}
+                    <button class="w-100 btn btn-black" type="submit">Post Review</button>
+                </form>
+            </section>
+            {% else %}
+            <h4 class="lead">Please <a href="{% url 'account_login' %}" class="font-weight-bold">sign in</a> to post
+                a review.</h4>
+            {% endif %}
+        </div>
+
     </div>
 </div>
 {% endblock %}
