@@ -191,17 +191,19 @@ Google Lighthouse will be used to check the Performance, Accessibility, Best Pra
 
     <details>
     <summary>Click to see result</summary>
-    <img src="media/wc3_css.png" alt="HTML results" width="50%" height="50%">
+    <img src="readme_data/testing/wc3_css.png" alt="HTML results" width="50%" height="50%">
     </details>
 
-    - No errors.
-    - When running CSS validator there is alot of warnings (ignored) depending on the full bootstrap theme choosen. 
+    - No errors. 
 
     <br>
     
 - [PEP8 Online](http://pep8online.com/) - For checking Python PEP8 requirements. 
    
-    - No errors.
+    Errors shown: 
+    - Line length - Fixed
+    - Missing module docstring - Not Fixed.
+    - Missing class docstring - Not Fixed.
 
     <br>
 
