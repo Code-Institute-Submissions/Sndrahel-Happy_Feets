@@ -5,7 +5,9 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category, Review
-from .forms import ProductForm
+from .forms import ProductForm, ReviewForm
+
+# pylint: disable=no-member
 
 
 def shop_products(request):
@@ -65,22 +67,41 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    # Add product review (from Code with Stein)
+    # Reviews code adapted from:
+    # https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/products/views.py)
 
-    if request.method == 'POST' and request.user.is_authenticated:
-        stars = request.POST.get('stars', 3)
-        content = request.POST.get('content', '')
-        user = request.POST.get('user', '')
+    reviews = Review.objects.filter(product=product)
 
-        reviews = Review.objects.create(
-            product=product, user=request.user, stars=stars,
-            content=content)
+    if request.method == 'POST':
 
-        return redirect('product_detail', product_id)
+        review_form = ReviewForm(data=request.POST or None)
 
-    # Review code ends here
+        if request.user.is_authenticated and review_form.is_valid():
+            review_form.instance.user = request.user
+            review = review_form.save(commit=False)
+            review.product = product
+            review.save()
+            messages.success(
+                request, (
+                    f'Thank you for reviewing "{product.name[:25]}.."! '
+                    'You can now view and remove it below.'
+                )
+            )
+
+            if product.rating:
+                product.rating = (product.rating + review.product_rating) / 2
+            else:
+                product.rating = review.product_rating
+            product.save()
+
+            return redirect(reverse('product_detail', args=[product.id]))
+    else:
+        review_form = ReviewForm()
+
     context = {
         'product': product,
+        'reviews': reviews,
+        'review_form': review_form,
     }
 
     return render(request, 'shop/product_detail.html', context)
