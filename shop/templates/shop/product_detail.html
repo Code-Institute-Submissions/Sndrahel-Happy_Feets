@@ -32,10 +32,12 @@
             <div class="product-details-container mb-5 mt-md-5">
                 <h3 class="mb-1">{{ product.name }}</h3>
                 <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
-                <p class="subtitle"> Stars:
-                    {% if product.get_rating == 0 %} <small><em>No ratings yet! </em><i class="fas fa-star"></i></small>
+                <p class="subtitle">
+                    {% if product.rating %}
+                    <small class="text-orange"><i class="fas fa-star mr-1"></i>{{ product.rating|floatformat:1 }} /
+                        5</small>
                     {% else %}
-                    {{ product.get_rating|floatformat:1 }}<i class="fas fa-star"></i>
+                    <small><em>No ratings yet! </em></small>
                     {% endif %}
                 </p>
 
@@ -92,71 +94,58 @@
         </div>
 
         <!-- Product Review code adapted from: 
-            https://github.com/SteinOveHelset/saulgadgets/blob/master/apps/store/templates/product_detail.html
-            https://github.com/ZahraSadiq/Milestone4-PosterBay/blob/master/products/templates/products/products.html-->
-        <hr>
-        <div>
-            <h2 class="subtitle mx-4 mt-3">Customer Reviews</h2>
-            <div>
-                {% for review in product.reviews.all %}
-                <div class="reviews-wrapper">
-                    <p>
-                        <strong>Date: </strong>{{ review.date_added|date:"Y-m-d" }}<br>
-                        <strong>Stars: </strong>{{ review.stars }} <i class="fas fa-star"></i><br>
-                        <strong>{{ request.user }}</strong><br>
-                    </p>
-                    {{ review.content }}
-                </div>
-
-                {% empty %}
-                <div class="reviews-wrapper">
-                    No reviews yet...
-                </div>
-                {% endfor %}
-            </div>
-            <br><br>
-            <div class="reviews-wrapper">
-                {% if request.user.is_authenticated %}
-                <hr>
-                <form method="POST" action=".">
-                    {% csrf_token %}
-
-                    <h4>Add Your Product Review Below</h4>
-                    <div class="field">
-                        <label>Stars</label>
-                        <div clas="control">
-                            <div class="select">
-                                <select name="stars">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3" selected>3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
+            https://johnvenkiah-cipp5johnven-9fgcadg9zys.ws-eu32.gitpod.io/-->
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <h3 class="lead text-orange">Customer Reviews</h3>
+                {% if reviews %}
+                <section class="review-box mb-3">
+                    {% for review in reviews %}
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="text-orange">{{ review.title }}</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-orange text-right"><i class="fas fa-star"></i> {{ review.product_rating }}/5
+                            </p>
                         </div>
                     </div>
-
-                    <div class="field">
-                        <label>Your Review</label>
-
-                        <div class="control">
-                            <textarea class="textarea" name="content"></textarea>
+                    <div class="row">
+                        <div class="col">
+                            <small class="text-muted">{% if not review.user == None %}{{ review.user }}{% else %}Account
+                                removed{% endif %} | {{ review.date_created }}</small>
                         </div>
                     </div>
-
-                    <div class="field">
-                        <div class="control">
-                            <button class="btn btn-black mt-3">Submit Review</button>
-                        </div>
-                    </div>
-                </form>
-                <!-- If user isn't signed in, ask them to sign in to leave a review -->
+                    <p>{{ review.user_review }}</p>
+                    <hr>
+                    {% endfor %}
+                </section>
                 {% else %}
-                <p class="mx-2 review-notification">Please sign in to add review!</p>
+                <!-- If no reviews display this -->
+                <p>No reviews yet.</p>
+                <hr>
                 {% endif %}
             </div>
-            <br><br>
+            <div class="col-12 col-md-6 col-lg-4">
+                {% if request.user.is_authenticated %}
+                <!-- Review form -->
+                <section class="review-form">
+                    {% if reviews %}
+                    <h3 class="lead text-orange">Review this product</h3>
+                    {% else %}
+                    <h3 class="lead text-orange">Be the first to leave a review</h3>
+                    {% endif %}
+                    <form method="POST" action="{% url 'product_detail' product.id %}">
+                        {% csrf_token %}
+                        {{ review_form|crispy }}
+                        <button class="w-100 btn btn-orange" type="submit">Post Review</button>
+                    </form>
+                </section>
+                {% else %}
+                <h4 class="lead">Please <a href="{% url 'account_login' %}" class="font-weight-bold">sign in</a> to post
+                    a review.</h4>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>

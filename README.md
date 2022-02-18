@@ -597,7 +597,7 @@ The following process assumes that GMail will be used for sending and receiving 
 - [Stack Overflow](https://stackoverflow.com/) - Was used to find solutions and debugging.
 - [GitHub](https://github.com/SteinOveHelset/saulgadgets/tree/master/apps/store) - Code for adding rating and reviews to shop products.
 - [GitHub](https://aqua-nightingale-u38ms1hh.ws-eu17.gitpod.io/) - Inspiration of structure for this README file were adapted from this site. 
-- [GitHub](https://github.com/johnvenkiah/CI_PP5_John_Venkiah) - Inspiration of structure for this README file were adapted from this site. 
+- [GitHub](https://github.com/johnvenkiah/CI_PP5_John_Venkiah) - Inspiration and code for reviews were adapted from this site. 
 - [GitHub](https://github.com/ZahraSadiq/Milestone4-PosterBay) - Inspiration of style and layout were adapted from this site.
  
 

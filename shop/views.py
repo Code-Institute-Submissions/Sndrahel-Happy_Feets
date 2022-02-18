@@ -1,3 +1,8 @@
+"""
+Code for reviews where adapted from:
+https://github.com/johnvenkiah/CI_PP5_John_Venkiah
+"""
+
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -66,9 +71,6 @@ def product_detail(request, product_id):
     """ A view to show individual shop products """
 
     product = get_object_or_404(Product, pk=product_id)
-
-    # Reviews code adapted from:
-    # https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/products/views.py)
 
     reviews = Review.objects.filter(product=product)
 

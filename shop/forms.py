@@ -1,3 +1,8 @@
+"""
+Code for reviews where adapted from:
+https://github.com/johnvenkiah/CI_PP5_John_Venkiah
+"""
+
 from django import forms
 from django.forms import Textarea, Select, ModelForm
 from .widgets import CustomClearableFileInput
