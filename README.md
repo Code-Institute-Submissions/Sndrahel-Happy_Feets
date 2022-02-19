@@ -265,7 +265,7 @@ If the user has administrator privileges and is logged in then there will be add
 
 ### Package/Product details
 
-![Package/Product]()
+![Package/Product](readme_data/mockup/product.png)
 
 This will display all information and data associated with a particular product. 
 There will be buttons to allow the user to: 
