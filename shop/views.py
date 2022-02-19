@@ -28,7 +28,7 @@ def shop_products(request):
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
-        
+
         if 'direction' in request.GET:
             direction = request.GET['direction']
 
@@ -47,10 +47,10 @@ def shop_products(request):
                     shop = shop.annotate(lower_name=Lower('name'))
                 if sortkey == 'category':
                     sortkey = 'category__name'
-            
+
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            
+
             shop = shop.order_by(sortkey)
 
         if 'category' in request.GET:
