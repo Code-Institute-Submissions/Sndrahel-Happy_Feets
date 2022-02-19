@@ -1,6 +1,7 @@
 # Testing
 
-## Table of Contents
+
+# Table of Contents
 
 - [Test Strategy](#teststrategy)
 
@@ -29,7 +30,18 @@ The code (HTML/CSS/JS/Python) must also satisfy the requirements of the online v
 * [JS Hint](https://jshint.com/). Javascript code quality tool. 
 * [PEP8 Online](http://pep8online.com/). Checks Python code for PEP8 compliance.
 
-Google Lighthouse will be used to check the Performance, Accessibility, Best Practices and Search Engine Optimisation of the website.
+Google Lighthouse has been used to check the Performance, Accessibility, Best Practices and Search Engine Optimisation of the website.
+    
+- Home page
+    <details>
+    <summary>Click to see result</summary>
+    <img src="readme_data/testing/lghth_home.png" alt="HTML results" width="50%" height="50%">
+    </details>
+- Shop page
+    <details>
+    <summary>Click to see result</summary>
+    <img src="readme_data/testing/lghth_shop.png" alt="HTML results" width="50%" height="50%">
+    </details>
 
 <br>
 
@@ -317,7 +329,8 @@ The site was consistently responsive across all devices and screen sizes with th
 - First deployed review code did not work as expected, a new code and model replaced the old code. 
 - On xl screens the content can have gaps between boxes and the edges of the screen.
 - Toast messages didn't show as expected, needed to change the JavaScript from: $('toast').toast('show') to $('.toast').show() to make the toast show as expected.
-- I also had a issue with loading images readme_data 
+
+[Back to Table of contents](#table-of-contents)
 
 
 
