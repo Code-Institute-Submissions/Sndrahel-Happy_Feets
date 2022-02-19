@@ -40,6 +40,7 @@ View the live website: [Happy Feets](https://happy-feetss.herokuapp.com/)
 # UX
 
 ## Strategy
+---
 
 The purpose of this project is to build a simple website for a podiatrist where customers can buy treatments or products of choice. This website can be easily changed for different type of businesses. 
 
@@ -103,8 +104,8 @@ I have also done some research on highest searched words in podiatrist and feet 
 
 <br>
 
----
 ## Scope
+---
 
 Based on the requirements of achieving user's and owner's goals and stories, below is the list of required pages with the features and functions:
 
@@ -143,8 +144,8 @@ Based on the requirements of achieving user's and owner's goals and stories, bel
         - As the business owner, I would like to be able to provide easy shopping experience for my customers.
 <br>
 
----
 ## Structures of the website
+---
 
 Website contains:
 - Navigation bar is fixed and collapse to burger icon on mobile devices with essential links to navigate on the website. 
@@ -153,10 +154,11 @@ Website contains:
 - The shop page will contain information of what kind of products can be bought.
 - The about page will contain information about the siteowner.
 - The footer will contains social media links.
+
 <br>
 
----
 ## Skeleton
+---
 
 ### Wireframes
 
@@ -173,8 +175,28 @@ The database diagram shows a list of items in each object and relationships betw
 
 - [Database Schema](readme_data/database/database-schema.png)
 
+**Data Models**
+
+The following models have been used to populate the database and for the site to function as it should:
+
+- Order - a users successful purchase leads to an instance of the Order model being created, storing delivery and user data
+
+- OrderLineItem - a model holding the product information for a single product, binding the product model together with the order
+
+- Product/Treatment - the model for the product itself and its details
+
+- Category - the category in which the product is placed
+
+- User - the built in Django User model, facilitates the users basic information
+
+- UserProfile - the model storing the users product and order information
+
+- Review - a model for users to give the product a rating and a review
+
+<br>
 
 ## Surface
+---
 
 ### Frontend Design
 The [Bootstrap](https://getbootstrap.com/) framework was used to implement the frontend of the website to give a responsive design that provides a good UX across all devices and screen sizes.
@@ -193,6 +215,7 @@ Images used in this site are taken from: [Freepik](https://freepik.com/)
 # Features:
 
 ## Existing Features:
+---
 
 ### Header
 
@@ -288,12 +311,14 @@ Once a user is registered they will have access to their profile page. This allo
 
 Site administrators can use this page to add new products to the website and also edit existing products in the database.
 
+<br>
 
 ## Features Left to Implement:
+---
 
 - Add a booking system so that customers can book treatments throuh a time table.
 - Add blog/news site. 
-- More styling and better pictures.
+- More styling, text and better pictures.
 
 ----
 # Technologies Used:
@@ -330,12 +355,15 @@ Site administrators can use this page to add new products to the website and als
 - [Am I Responsive](http://ami.responsivedesign.is/): was used to generate the website screen shots displayed at the top of this page.
 - [Favicon](https://favicon.io/): was used to generate the favicon for the website.
 
----  
+<br>
+
 ## Testing:
+---
 
 See [testing.md](testing.md) for the testing documentation.
 
----
+<br>
+
 # Deployment
 
 This project was developed using [GitPod](https://gitpod.io/) and the latest version of the code base can be found in the master branch of this
