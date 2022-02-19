@@ -267,15 +267,20 @@ If the user has administrator privileges and is logged in then there will be add
 
 ![Package/Product]()
 
-This will display all data associated with a particular product. There will be buttons to allow the user to add the product to their shopping bag.
+This will display all information and data associated with a particular product. 
+There will be buttons to allow the user to: 
+- choose quantity of products
+- add the product to their shopping bag
+- return back to shopping
 If the user has administrator privileges and is logged in then there will be addition links on each item allow the user to edit/delete the product.
+The detailed view also display a section of customer reviews.
 If a user is logged in then they will be able to leave a product review/rating.
 
 <br>
 
 ### Shopping Bag
 
-![Shopping Bag]()
+![Shopping Bag](readme_data/mockup/bag.png)
 
 The shopping bag will display all items that that have been added by the user.
 For each item it will show the unit price, quantity and total.
@@ -287,7 +292,7 @@ A Keep Shopping and Checkout button will also be displayed at the bottom of the 
 
 ### Checkout Page
 
-![Checkout]()
+![Checkout](readme_data/mockup/checkout.png)
 The Checkout page will contain a brief summary of the order and a form for the delivery details.
 If the user is logged in then the form will be populated with any address information the user has saved in their profile.
 The form will be validated on submission and any errors/omissions will be reported back to the user.
@@ -306,17 +311,17 @@ Also user can go back to the bag to adjust shopping bag.
 
 ### Profile Page
 
-![Profile]()
+![Profile](readme_data/mockup/profile.png)
 
-Once a user is registered they will have access to their profile page. This allows the user to enter default delivery information, view previous orders and view/edit/delete any reviews they have written on the site.
+Once a user is registered they will have access to their profile page. This allows the user to enter default delivery information and view previous orders.
 
 <br>
 
 ### Product Management Page
 
-![Product Management Page]()
+![Product Management Page](readme_data/mockup/management.png)
 
-Site administrators can use this page to add new products to the website and also edit existing products in the database.
+Site administrators can use this page to add new products to the website.
 
 <br>
 
