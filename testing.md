@@ -173,8 +173,31 @@ Google Lighthouse will be used to check the Performance, Accessibility, Best Pra
 
 <br>
 
+---
 ## Automated Testing:
 ---
+
+### Test Driven Development (TDD)
+
+<br>
+
+[Django unittest documentation](https://docs.djangoproject.com/en/3.2/topics/testing/overview/)
+
+Using Django's standard unit test library module `unittest`, a class based approach was used to build tests for each app's functionality.
+
+For the checkout app in the project, the following files were tested:
+  - `views.py` tested by `test_views.py`
+  - `models.py` tested by `test_models.py`
+  - `forms.py` tested by `test_forms.py`
+
+    <details>
+    <summary>Click to see result</summary>
+    <img src="readme_data/testing/django_unitest.png" alt="HTML results" width="50%" height="50%">
+    </details>
+
+<br>
+
+### Validation Services 
 
 - [W3C Markup Validation Service](https://validator.w3.org/) - For testing HTML code.
     
@@ -226,6 +249,7 @@ Google Lighthouse will be used to check the Performance, Accessibility, Best Pra
 
 <br>
 
+---
 ## Manual Testing
 ---
 
