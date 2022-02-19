@@ -137,7 +137,7 @@ Google Lighthouse will be used to check the Performance, Accessibility, Best Pra
 
     Expected: From the product detail view, the customer should be able to leave reviews on any of the products.
 
-    Result: From the product detail view, the customer can leave a review and rating on products if they are logged in. - Not working!!
+    Result: From the product detail view, the customer can leave a review and rating on products if they are logged in. 
 
 <br>
 
@@ -267,6 +267,15 @@ The site was consistently responsive across all devices and screen sizes with th
 - Confirm that all the navigation links under the menu drop down menu function correctly. On mobile devices these will collapse into a hamburger icon - works.
 - Test footer links function works correctly - works.
 - Click on the facebook link and verify it opens up the correct page in a new browser tab - works.
+    <details>
+    <summary>Click to see result</summary>
+    <img src="readme_data/deployment/facebook.png" alt="HTML results" width="50%" height="50%">
+    </details>
+- Test news letter subscribe and verify it return correct result - works.
+    <details>
+    <summary>Click to see result</summary>
+    <img src="readme_data/deployment/MailChimp.png" alt="HTML results" width="50%" height="50%">
+    </details>
 - Clear user experience & navigation - works.
 - Login/register/logout functionalities - works.
 - Alert messeges shown when logged in/out - works.
