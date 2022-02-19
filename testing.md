@@ -206,7 +206,7 @@ For the checkout app in the project, the following files were tested:
     <img src="readme_data/testing/wc3_html.png" alt="HTML results" width="50%" height="50%">
     </details>
 
-    - No errors.
+    - Had a few errors due to a child element <li> in mobile-top-header. Changed the <li> to a <div> and the solved the errors. - Fixed.
 
     <br>
 
@@ -224,7 +224,7 @@ For the checkout app in the project, the following files were tested:
 - [PEP8 Online](http://pep8online.com/) - For checking Python PEP8 requirements. 
    
     Errors shown: 
-    - Line length - Fixed
+    - Line length - Fixed (not fied in settings.py)
     - Missing module docstring - Not Fixed.
     - Missing class docstring - Not Fixed.
 
@@ -285,10 +285,14 @@ The site was consistently responsive across all devices and screen sizes with th
 
 - Manually testing via Devtools 
 - Test navigation bar links function correctly and that the correct links are displayed for admin and non admin users - works.
+- Confirm that all the navigation links under the menu drop down menu function correctly. On mobile devices these will collapse into a hamburger icon - works.
 - Click each of the menu options listed above and confirm that you are taken to the correct page - works.
+- Login/register/logout functionalities - works.
+- Alert messeges shown when logged in/out - works.
 - Clicking the Logout option should log you out of the website - works.
 - Login in using an administrator account and check that the following options appear in the nav bar: Product Management, My Profile & Logout - works.
-- Confirm that all the navigation links under the menu drop down menu function correctly. On mobile devices these will collapse into a hamburger icon - works.
+- Edit, add, delete products function for admin - works.
+- My profile and order history is shown as aspected - works.
 - Test footer links function works correctly - works.
 - Click on the facebook link and verify it opens up the correct page in a new browser tab - works.
     <details>
@@ -300,20 +304,20 @@ The site was consistently responsive across all devices and screen sizes with th
     <summary>Click to see result</summary>
     <img src="readme_data/deployment/MailChimp.png" alt="HTML results" width="50%" height="50%">
     </details>
+- Confirmation mail when sign up and order complete - works.
+- Stripe payment works as expected - works.
+- Toast confirmations - works.
 - Clear user experience & navigation - works.
-- Login/register/logout functionalities - works.
-- Alert messeges shown when logged in/out - works.
-- Edit, add, delete products function for admin - works.
 
 <br>
 
 ## Bugs / Issues:
 ---
 
-- 
-- 
-- 
--  
+- First deployed review code did not work as expected, a new code and model replaced the old code. 
+- On xl screens the content can have gaps between boxes and the edges of the screen.
+- Toast messages didn't show as expected, needed to change the JavaScript from: $('toast').toast('show') to $('.toast').show() to make the toast show as expected.
+- I also had a issue with loading images readme_data 
 
 
 
