@@ -104,16 +104,17 @@ I have also done some research on highest searched words in podiatrist and feet 
 
 <br>
 
+---
 ## Scope
 ---
 
 Based on the requirements of achieving user's and owner's goals and stories, below is the list of required pages with the features and functions:
 
 - Simple design landing page that the purpose of the website is obvious to anybody and even first-time users know how to navigate the website. 
-- Treatments page where users can view all the treatments.
-- Shop page where user can view all products.
+- Treatments page where users can view and buy all the treatments.
+- Shop page where user can view and buy all products.
 - About page where users can get information about the siteowner and the company.
-- Login / register page where users can log in or register.
+- Login / register (account) page where users can log in or register.
 
 <br>
 
@@ -144,6 +145,7 @@ Based on the requirements of achieving user's and owner's goals and stories, bel
         - As the business owner, I would like to be able to provide easy shopping experience for my customers.
 <br>
 
+---
 ## Structures of the website
 ---
 
@@ -157,6 +159,7 @@ Website contains:
 
 <br>
 
+---
 ## Skeleton
 ---
 
@@ -195,6 +198,7 @@ The following models have been used to populate the database and for the site to
 
 <br>
 
+---
 ## Surface
 ---
 
@@ -210,55 +214,54 @@ A neutral colour scheme was chosen for the site as most of the colour on majorit
 ### Images
 Images used in this site are taken from: [Freepik](https://freepik.com/)
 
+<br>
 
----
 # Features:
 
 ## Existing Features:
 ---
 
-### Header
-
-![Header]()
-
-The header will be in a fixed position at the top of the screen. This allows visitors easy access to navigate the site via the menu. The header will include a nav bar split into two rows.
-
-
 ### Navbar
 
-![Navbar]()
+![Navbar](readme_data/mockup/navbar.png)
 
+The navbar is fixed and will scroll with the page content.
 The top row in navbar will include a link back to the home page, a search bar and links to My Accounts and the Shopping Cart.
-The bottom section will include another navigation menu, aligned to the left of the page, which includes links to allow the user to browse the site.
+The bottom section will include another navigation menu, which includes links to allow the user to browse the site.
 On mobile the navigation links in the bottom row will collapse into a burger menu. The links to My Account and Shopping Cart will remain visible at the top of the screen for easy access.
 The navigation links in the My Account dropdown will change when the user is registered and logged in.
 A message bar will be positioned below the header to allow information to be presented to the user.
 
+<br>
 
 ### Footer
 
-![Footer]()
+![Footer](readme_data/mockup/footer.png)
 
-The footer will be located at the bottom of each page and will scroll with the page contents.
-Social media links and other contact information will be positioned to the right of the footer.
+The footer will be located at the bottom of each page. The footer contain contact information, a subscribe for newsletter and social media links.
 
+<br>
 
 ### Home Page
 
-![Home Page]()
+![Home Page](readme_data/mockup/home.png)
 
-The home page will contain some short information about treatment, shop and a testimonial carousel. 
+The home page will contain some short information about: 
+- treatments and a call to action button 
+- shop and a call to action button 
+- a testimonial carousel. 
 
+<br>
 
 ### Shop / Treatments Page
 
-![Shop/treatments]()
+![Shop/treatments](readme_data/mockup/shop.png)
 
 The Shop / Treatments page will display all the products available on the site.
-The page will clearly display the product image, name, price and a description of the product. Clicking on the product image or the call to action button will open up a new page containing more details on the selected product.
+It also display a sort by bar that allows customer to sort existing products. The page will clearly display the product image, name, price and a description of the product. Clicking on the product image or the call to action button will open up a new page containing more details on the selected product.
 If the user has administrator privileges and is logged in then there will be addition links on each item allow the user to edit/delete the product.
-If a user is logged in then they will be able to leave a product review/rating.
 
+<br>
 
 ### Package/Product details
 
@@ -268,6 +271,7 @@ This will display all data associated with a particular product. There will be b
 If the user has administrator privileges and is logged in then there will be addition links on each item allow the user to edit/delete the product.
 If a user is logged in then they will be able to leave a product review/rating.
 
+<br>
 
 ### Shopping Bag
 
@@ -279,6 +283,7 @@ The user can change the quantity against each item and also remove it from their
 At the bottom of the page the basket total, delivery cost and order total will be displayed. 
 A Keep Shopping and Checkout button will also be displayed at the bottom of the page.
 
+<br>
 
 ### Checkout Page
 
@@ -297,6 +302,7 @@ The payment information system will be implemented by Stripe and it will allow t
 Complete order will submit a payment and redirect to order confirmation page.
 Also user can go back to the bag to adjust shopping bag.
 
+<br>
 
 ### Profile Page
 
@@ -304,6 +310,7 @@ Also user can go back to the bag to adjust shopping bag.
 
 Once a user is registered they will have access to their profile page. This allows the user to enter default delivery information, view previous orders and view/edit/delete any reviews they have written on the site.
 
+<br>
 
 ### Product Management Page
 
@@ -313,6 +320,7 @@ Site administrators can use this page to add new products to the website and als
 
 <br>
 
+---
 ## Features Left to Implement:
 ---
 
@@ -320,8 +328,11 @@ Site administrators can use this page to add new products to the website and als
 - Add blog/news site. 
 - More styling, text and better pictures.
 
-----
-# Technologies Used:
+<br>
+
+---
+## Technologies Used:
+---
 
 ### Languages 
 
@@ -357,6 +368,7 @@ Site administrators can use this page to add new products to the website and als
 
 <br>
 
+---
 ## Testing:
 ---
 
@@ -364,12 +376,14 @@ See [testing.md](testing.md) for the testing documentation.
 
 <br>
 
-# Deployment
+---
+## Deployment
+---
 
 This project was developed using [GitPod](https://gitpod.io/) and the latest version of the code base can be found in the master branch of this
 repository. No other branches were created during the development of this project.
 
-## Cloning the Repository
+### Cloning the Repository
 
 To clone this [repository](https://github.com/Sndrahel/Happy_Feets.git) follow the instruction below:
 
@@ -380,7 +394,7 @@ To clone this [repository](https://github.com/Sndrahel/Happy_Feets.git) follow t
 5. Type in the following command using the URL copied from step 2 and press Enter. This will create a cloned copy of the repository.
     * `git clone https://github.com/Sndrahel/Happy_Feets.git`
 
-## Deploying to Heroku from Gitpod
+### Deploying to Heroku from Gitpod
 
 1. Open [Heroku](https://heroku.com) in the browser and login creating a new account if required.
 2. On the Heroku Dashboard click New->Create New App.
@@ -462,7 +476,7 @@ To clone this [repository](https://github.com/Sndrahel/Happy_Feets.git) follow t
 30. Commit the changes to Github. Heroku should pickup the changes from Github and deploy the site to app-name.herokuapp.com.
 
 
-## AWS S3 Configuration
+### AWS S3 Configuration
 
 The AWS S3 service will be used to host all static files and images.
 
@@ -576,7 +590,7 @@ The AWS S3 service will be used to host all static files and images.
 31. The superuser email address for the Postgres database needs to be confirmed to allow the user to login to the application. To do this login to the Django admin panel and confirm the email address for the superuser by checking the Verified box.
 
 
-## Stripe Configuration
+### Stripe Configuration
 1. Login to Stripe and in the Developers section click on API Keys. In Heroku add the publishable and secret keys as the following config variables.
     * `STRIPE_PUBLIC_KEY`
     * `STRIPE_SECRET_KEY`
@@ -587,7 +601,7 @@ The AWS S3 service will be used to host all static files and images.
 4. To confirm the webhook is working send a test webhook from Stripe to ensure the listener is working.
 
 
-## Email Configuration
+### Email Configuration
 The following process assumes that GMail will be used for sending and receiving emails.
 1. Open [GMail](https://gmail.com) in the browser and login creating a new account if required.
 2. Open the account settings, select Accounts and Import and then other Google account settings.
@@ -615,11 +629,13 @@ The following process assumes that GMail will be used for sending and receiving 
 ```
 10. Confirm the email is functioning correctly by registering a new user and checking that the email confimration is received.
 
- 
----
-# Credits
+<br>
 
-## Code:
+---
+## Credits
+---
+
+### Code:
 - [Code Institute](https://codeinstitute.net/) - The majority of the code for this project comes from Code Institute Boutiqe Ado tutorial.
 - [Youtube](https://www.youtube.com/watch?v=Y5vvGQyHtpM) - Tutorial used for adding rating and reviews to shop products.  
 - [Stack Overflow](https://stackoverflow.com/) - Was used to find solutions and debugging.
@@ -627,9 +643,10 @@ The following process assumes that GMail will be used for sending and receiving 
 - [GitHub](https://aqua-nightingale-u38ms1hh.ws-eu17.gitpod.io/) - Inspiration of structure for this README file were adapted from this site. 
 - [GitHub](https://github.com/johnvenkiah/CI_PP5_John_Venkiah) - Inspiration and code for reviews were adapted from this site. 
 - [GitHub](https://github.com/ZahraSadiq/Milestone4-PosterBay) - Inspiration of style and layout were adapted from this site.
- 
 
-## Acknowledgments:
+<br> 
+
+### Acknowledgments:
 
 - Nishant Kumar: My Code Institute mentor who guided me through this process and shared a lot of valuable knowledge.
 

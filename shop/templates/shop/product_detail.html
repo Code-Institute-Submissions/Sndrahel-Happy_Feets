@@ -96,13 +96,13 @@
         <!-- Product Review code adapted from: 
             https://johnvenkiah-cipp5johnven-9fgcadg9zys.ws-eu32.gitpod.io/-->
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            <h3 class="lead text-orange">Customer Reviews</h3>
+            <h3 class="lead text-orange font-weight-bold">Customer Reviews</h3>
             {% if reviews %}
             <section class="review-box mb-3">
                 {% for review in reviews %}
                 <div class="row">
                     <div class="col-6">
-                        <p class="text-orange">{{ review.title }}</p>
+                        <p class="text-orange font-weight-bold">{{ review.title }}</p>
                     </div>
                     <div class="col-6">
                         <p class="text-orange text-right"><i class="fas fa-star"></i> {{ review.product_rating }}/5
